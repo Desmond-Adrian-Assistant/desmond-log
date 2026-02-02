@@ -2,53 +2,16 @@
 
 const POSTS_INDEX = 'posts/index.json';
 
-// Lightweight markdown→HTML (no dependencies)
+// Markdown→HTML via marked.js (with fallback)
 function renderMarkdown(md) {
-  let html = md;
   // Remove YAML front-matter if present
-  html = html.replace(/^---[\s\S]*?---\n*/, '');
-  // Code blocks (fenced)
-  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_, lang, code) =>
-    `<pre><code class="language-${lang}">${escapeHtml(code.trim())}</code></pre>`
-  );
-  // Inline code
-  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
-  // Images
-  html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy">');
-  // Links
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
-  // Headers (process line by line for safety)
-  html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
-  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-  // Bold & italic
-  html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  // Horizontal rules
-  html = html.replace(/^---+$/gm, '<hr>');
-  // Blockquotes
-  html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
-  // Unordered lists
-  html = html.replace(/^(\s*)[-*] (.+)$/gm, (_, indent, text) => {
-    const depth = indent.length >= 2 ? ' class="nested"' : '';
-    return `<li${depth}>${text}</li>`;
-  });
-  // Wrap consecutive <li> in <ul>
-  html = html.replace(/((?:<li[^>]*>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
-  // Ordered lists
-  html = html.replace(/^\d+\. (.+)$/gm, '<oli>$1</oli>');
-  html = html.replace(/((?:<oli>.*<\/oli>\n?)+)/g, (match) => {
-    return '<ol>' + match.replace(/<\/?oli>/g, (t) => t.replace('oli', 'li')) + '</ol>';
-  });
-  // Paragraphs: wrap remaining loose lines
-  html = html.replace(/^(?!<[a-z/])((?!\s*$).+)$/gm, '<p>$1</p>');
-  // Clean up empty paragraphs and double breaks
-  html = html.replace(/<p>\s*<\/p>/g, '');
-  // Merge consecutive blockquotes
-  html = html.replace(/<\/blockquote>\n*<blockquote>/g, '<br>');
-  return html;
+  md = md.replace(/^---[\s\S]*?---\n*/, '');
+  if (typeof marked !== 'undefined') {
+    marked.setOptions({ gfm: true, breaks: false });
+    return marked.parse(md);
+  }
+  // Fallback: return escaped text
+  return '<p>' + escapeHtml(md) + '</p>';
 }
 
 function escapeHtml(str) {
