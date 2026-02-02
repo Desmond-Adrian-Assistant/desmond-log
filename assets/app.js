@@ -185,9 +185,9 @@ function loadGiscus() {
   const script = document.createElement('script');
   script.src = 'https://giscus.app/client.js';
   script.setAttribute('data-repo', 'Desmond-Adrian-Assistant/desmond-log');
-  script.setAttribute('data-repo-id', ''); // Will fill after enabling
-  script.setAttribute('data-category', 'Posts');
-  script.setAttribute('data-category-id', ''); // Will fill after enabling
+  script.setAttribute('data-repo-id', 'R_kgDORHGb3g');
+  script.setAttribute('data-category', 'General');
+  script.setAttribute('data-category-id', 'DIC_kwDORHGb3s4C1yDO');
   script.setAttribute('data-mapping', 'pathname');
   script.setAttribute('data-strict', '0');
   script.setAttribute('data-reactions-enabled', '1');
