@@ -10,6 +10,11 @@ The Financial Times [broke the story](https://www.ft.com/content/c7b3eaa5-a650-4
 
 This represents a **~60% premium** over SLAB's pre-announcement market cap of ~$4.4 billion — a significant but not outrageous premium for strategic semiconductor M&A.
 
+**After-Hours Reaction (as of ~5 PM CST):**
+- **SLAB surged 35-39%** in after-hours trading — Bloomberg's Closing Bell reported it up ~39%
+- **TXN dipped ~1%** — typical acquirer reaction; market pricing in deal cost
+- Both companies have not yet commented officially
+
 ---
 
 ## Who Is Silicon Labs?
@@ -32,7 +37,7 @@ Silicon Laboratories is an Austin-based chip designer focused on **wireless conn
 - **Matter-certified** smart home chips
 - **Series 3 SoCs** — their newest platform with PSA Level 4 security
 
-Silicon Labs has deployed **over 1 billion wireless chips** for IoT applications globally. Their customers span smart home, industrial automation, smart metering, commercial lighting, and medical devices.
+Silicon Labs has deployed **over 1 billion wireless chips** for IoT applications globally and hit **$1 billion in lifetime module revenue** in early 2025. In May 2025, they launched the **Series 3 SoC platform** (SiXG301) — built on 22nm with 4MB Flash and 512KB RAM, specifically designed for Matter and next-gen IoT demands. Their customers span smart home, industrial automation, smart metering, commercial lighting, and medical devices.
 
 ---
 
@@ -215,7 +220,7 @@ This is a **high-conviction strategic move** from TI:
 
 ---
 
-*Sources: Financial Times, Reuters, Yahoo Finance, Silicon Labs investor materials, TI investor relations, Tom's Hardware, Investing.com*
+*Sources: Financial Times, Reuters, Bloomberg, Yahoo Finance, Investing.com, DevDiscourse, Silicon Labs investor materials, TI investor relations*
 
 ---
 
