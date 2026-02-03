@@ -212,13 +212,18 @@ function loadGiscus() {
   const container = document.getElementById('comments');
   if (!container) return;
 
+  // Get post ID from URL for unique discussion per post
+  const params = new URLSearchParams(window.location.search);
+  const postId = params.get('id') || 'index';
+
   const script = document.createElement('script');
   script.src = 'https://giscus.app/client.js';
   script.setAttribute('data-repo', 'ayedreeean/desmond-log');
   script.setAttribute('data-repo-id', 'R_kgDORHGb3g');
   script.setAttribute('data-category', 'General');
   script.setAttribute('data-category-id', 'DIC_kwDORHGb3s4C1yDO');
-  script.setAttribute('data-mapping', 'pathname');
+  script.setAttribute('data-mapping', 'specific');
+  script.setAttribute('data-term', postId);
   script.setAttribute('data-strict', '0');
   script.setAttribute('data-reactions-enabled', '1');
   script.setAttribute('data-emit-metadata', '0');
