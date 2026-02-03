@@ -1,86 +1,98 @@
----
-title: "Market Close Brief — Feb 3, 2026"
-date: 2026-02-03
-tags: [news-brief, market-close]
----
-
 # Market Close Brief — Feb 3, 2026
 
-## 🔴 The Big Story: Anthropic Crushes Software & Data Stocks
-
-Anthropic launched an AI legal automation tool today, triggering a **bloodbath in software and data services**:
-
-| Company | Drop | Sector |
-|---------|------|--------|
-| Thomson Reuters | -18% | Legal data |
-| Relx | -14% | Information/analytics |
-| Wolters Kluwer | -13% | Legal software |
-| London Stock Exchange | -13% | Data services |
-| Sage | -10% | Business software |
-| Accenture | -9% | IT services |
-| Pearson | -8% | Publishing |
-| Experian | -7% | Credit/data |
-
-Analysts explicitly attributed the selloff to Anthropic's announcement. Morgan Stanley called it "intensifying competition" for Thomson Reuters. AJ Bell warned of potential "disintermediation" of data companies.
+A brutal day for software and tech. Anthropic's legal AI tool announcement triggered a selloff across enterprise software, while defensives rallied and Walmart hit a historic $1 trillion market cap.
 
 ---
 
-## 📊 Portfolio Scorecard
+## 📊 Core Holdings
 
 | Ticker | Close | Change |
 |--------|-------|--------|
-| TSLA | $421.96 | +0.01% |
-| NVDA | ~$179 | -3.4% |
-| QQQ | — | -1.3% |
-| SPY | — | -0.5% |
-
-**NVDA** got hit on sector rotation out of tech + OpenAI seeking alternative chip suppliers.
-
-**TSLA** flat — held up despite broader tech weakness. SpaceX/xAI merger news providing support.
-
----
-
-## 🔄 Sector Rotation
-
-Money moving:
-- **OUT**: Tech, software, AI "beneficiaries"
-- **INTO**: Defensives, value, commodities
-
-Winners today:
-- **Walmart** +3% (hit $1T market cap)
-- **PepsiCo** +4% (strong earnings)
-- **Merck** +3.5% (Keytruda demand)
-- **Banks** (JPM, WFC +2%)
-- **Gold** +5%, **Silver** +10% (rebound from last week's crash)
+| TSLA | ~$404 | -2.1% |
+| NVDA | ~$181 | -2.9% |
+| TXN | ~$226 | -1.5% |
+| PLTR | $147.78 → **$158.05 AH** | +6.9% AH (Q4 blowout) |
+| GOOG | ~$338 | -2.4% |
+| AAPL | ~$248 | -1.8% |
+| AMD | ~$114 | -3.2% (earnings after close) |
 
 ---
 
-## 💀 Earnings Disasters
+## 📈 Indices & ETFs
 
-- **PayPal** -18% — Missed Q4, weak 2026 guidance (flat margins, low single-digit EPS growth)
-- **Novo Nordisk** -12% — Disappointing 2026 outlook for Wegovy/Ozempic
-
----
-
-## 🏛️ Fed Watch
-
-Richmond Fed's Barkin: "Some distance to travel" on inflation. No rate cuts expected until June at earliest. Higher-for-longer continues.
-
----
-
-## 🏠 Congress Drama
-
-House struggling to advance federal funding bill — added to afternoon selling pressure. $QQQ dropped 2.5% from session highs after the headline.
+| Index/ETF | Close | Change |
+|-----------|-------|--------|
+| **S&P 500** | 6,898.54 | **-1.12%** |
+| **Nasdaq** | 19,270 | **-2.3%** |
+| **Dow** | 49,039 | -0.75% (hit 49,653 intraday record) |
+| **QQQ** | ~$534 | -2.1% |
+| **SPY** | ~$694 | -1.0% |
+| **SMH** | ~$252 | -2.8% |
 
 ---
 
-## 📈 After-Hours Watch
+## 🪙 Crypto
 
-- **Alphabet (GOOG)** — Reports earnings tonight
-- **Amazon (AMZN)** — Reports Thursday
+| Asset | Price | 24h Change |
+|-------|-------|------------|
+| **BTC** | $79,000 | +6.8% (recovered from $74k weekend lows) |
+| **ETH** | $2,340 | +8.8% |
+| **SOL** | $103.22 | +3.2% |
 
-Both critical for determining if AI narrative holds or cracks further.
+Relief rally after weekend bloodbath. Still fragile.
 
 ---
 
-*Desmond | Feb 3, 2026*
+## 🔥 Today's Big Story: Anthropic Nukes Legal/SaaS Stocks
+
+Anthropic announced an **AI-powered plugin for in-house legal teams** — and it triggered a massacre in legal software, data services, and enterprise SaaS:
+
+| Company | Ticker | Damage |
+|---------|--------|--------|
+| **Thomson Reuters** | TRI | -6.5% to -18% |
+| **RELX** | RELX | -9.6% to -14% |
+| **Wolters Kluwer** | WKL | -11% |
+| **Pearson** | PSO | -5%+ |
+| **ServiceNow** | NOW | -7% |
+| **Salesforce** | CRM | -5% to -7% |
+| **Adobe** | ADBE | -5%+ |
+| **Accenture** | ACN | -9%+ |
+
+**The narrative:** Customers are building their own tools with Claude. They no longer want expensive SaaS subscriptions. This is the "AI replaces middleware" thesis playing out in real-time.
+
+---
+
+## 📉 Other Movers
+
+### PayPal (PYPL): -17% to -19%
+- Q4 earnings miss
+- Weak 2026 guidance (low single-digit profit decline vs. Street's +8%)
+- CEO Alex Chriss out, replaced by Enrique Lores
+- Branded checkout grew only 1% YoY
+
+### Walmart (WMT): +0.85% — **$1 TRILLION MARKET CAP**
+- First time ever. Only the 12th company to hit this milestone.
+- E-commerce growth and new business lines driving the rally.
+
+### Sector Rotation
+- **Defensives up:** Pepsi +4%, Walmart +1%, banks catching bids
+- **Tech crushed:** Nvidia -3%, Nasdaq wiped $1.1T in market cap
+- Safe-haven rotation: Gold surged 6.18% to $4,939, Silver +13.25%
+
+### Fed's Barkin: Still Hawkish
+- No rate cuts expected until at least June
+- "Pace of change and execution" not meeting expectations — sounds familiar after PayPal's CEO exit
+
+---
+
+## 📝 Summary
+
+Today felt like a wake-up call. Anthropic's legal tool announcement wasn't just a product launch — it was a thesis statement: **AI is coming for the middleware layer**. Thomson Reuters, RELX, ServiceNow, Salesforce — all got hit as the market priced in a future where enterprises build on AI primitives instead of paying for bloated SaaS.
+
+Meanwhile, the rotation to defensives continued. Walmart joining the $1T club while Nasdaq bleeds tells you where big money is hiding.
+
+PLTR remains the outlier — soaring after-hours on earnings despite the carnage. AMD reports after close. The week is far from over.
+
+---
+
+*Filed at market close, Feb 3, 2026*

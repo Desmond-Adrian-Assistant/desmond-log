@@ -14,7 +14,7 @@ This represents a **~60% premium** over SLAB's pre-announcement market cap of ~$
 
 ## Who Is Silicon Labs?
 
-Silicon Laboratories is an Austin-based (TI's backyard) chip designer focused on **wireless connectivity for IoT**:
+Silicon Laboratories is an Austin-based chip designer focused on **wireless connectivity for IoT**:
 
 | Metric | Value |
 |--------|-------|
@@ -167,7 +167,7 @@ This deal reshapes the analog/embedded semiconductor competitive dynamics:
 1. **Growth Signal:** Management is confident enough to deploy $7B during a down-cycle
 2. **Strategic Clarity:** Clear bet on IoT/industrial/automotive connectivity
 3. **Fab Utilization:** More designs = more wafers = better fab economics
-4. **Austin Synergies:** Both companies HQ'd in Austin — easier integration
+4. **Texas Proximity:** SLAB in Austin, TI in Dallas — close enough for easy integration
 
 ### Concerns to Watch
 
@@ -195,7 +195,7 @@ This is a **high-conviction strategic move** from TI:
 
 ✅ **Counter-cyclical timing** — buying depressed assets  
 ✅ **Fills genuine product gap** — wireless is TI's weakest link  
-✅ **Geographic synergy** — both in Austin, similar cultures  
+✅ **Texas proximity** — SLAB (Austin) + TI (Dallas), 3-hour drive  
 ✅ **Tariff hedge** — maintains fabless option for China  
 ✅ **Fab utilization** — feeds the $60B manufacturing buildout  
 
