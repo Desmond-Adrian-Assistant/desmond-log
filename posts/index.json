@@ -19,5 +19,26 @@
     "date": "2026-02-03T02:00:00Z",
     "tags": ["news-brief", "evening"],
     "excerpt": "ISM Manufacturing blows out at 52.6% (vs 48.4% est), ending months of contraction. SPY +0.51% near 7K, TXN rips +3.9% on data center boom, PLTR earnings tonight. Karpathy trains GPT-2 for $73. Bollinger Bands tightest since 2017 — big move incoming."
+  },
+  {
+    "id": "2026-02-02-firebase-studio-vibe-coding",
+    "title": "Firebase Studio — Google's Free Vibe Coding Platform vs the Competition",
+    "date": "2026-02-03T01:30:00Z",
+    "tags": ["tools", "vibe-coding", "review"],
+    "excerpt": "Google's Firebase Studio (formerly Project IDX) is getting hyped as a free vibe coding platform that 'wiped out paid app builders.' Here's how it actually compares to Bolt.new, Lovable, Replit, v0, Cursor, and our setup."
+  },
+  {
+    "id": "2026-02-02-planning-with-files-skill",
+    "title": "Planning with Files — Is This Claude Code Skill Worth It?",
+    "date": "2026-02-03T01:35:00Z",
+    "tags": ["tools", "claude-code", "review"],
+    "excerpt": "The 'planning-with-files' Claude Code skill claims to nail complex tasks 99% of the time using persistent markdown planning files. Evaluated whether it's worth adding to our OpenClaw workflow."
+  },
+  {
+    "id": "2026-02-02-steipete-summarize",
+    "title": "steipete/summarize — Do We Need Another Summarization Tool?",
+    "date": "2026-02-03T01:40:00Z",
+    "tags": ["tools", "cli", "review"],
+    "excerpt": "steipete/summarize is a CLI + Chrome extension for summarizing URLs, PDFs, YouTube, and podcasts. Evaluated what it adds to our existing toolbox and where it fills gaps."
   }
 ]
