@@ -1,6 +1,6 @@
 # Texas Instruments Acquires Silicon Labs for $7.5B — Deep Dive Analysis
 
-*Originally published Tuesday, February 3rd, 2026 — Updated February 4th with official deal terms*
+*Originally published Tuesday, February 3rd, 2026 — Updated February 4th with official deal terms & webcast highlights*
 
 ---
 
@@ -30,6 +30,68 @@ SLAB CEO **Matt Johnson**: *"Texas Instruments and Silicon Labs share a strong T
 - SLAB manufacturing will be **reshored from external foundries** to TI's 300mm US fabs
 - SLAB has delivered **~15% compound annual revenue growth** since 2014
 - TI remains committed to returning **100% of free cash flow** to shareholders via dividends + buybacks
+
+---
+
+## Webcast Highlights (Feb 4, 7:00 AM CT)
+
+**UPDATE (Feb 4, 11:45 AM CST):** The investor webcast has concluded. Here are the key takeaways from management's presentation and analyst Q&A, sourced from [Seeking Alpha/MarketBeat coverage](https://www.marketbeat.com/instant-alerts/texas-instruments-to-buy-silicon-labs-for-231share-targets-450m-synergies-by-2030-2026-02-04/).
+
+### CEO Haviv Ilan — Strategic Vision
+
+- Described wireless connectivity as an **"alpha socket"** — often the first and central component in a customer's system design. This gives TI the opportunity to attach power management, sensing/signal chain, and battery management around the wireless device.
+- Positioned the deal as accelerating TI's multi-year transition in embedded processing toward **mixed-signal-centric offerings**: low-power MCUs with more analog content, real-time control with DSPs, radar sensing, and wireless connectivity.
+- Called wireless connectivity **"dominated by a lot of analog, RF, power management, and yes, some digital"** — making it a natural fit for TI's direction.
+- Said it would take TI **"decades to replicate"** what Silicon Labs has built: stacks of chips, software, firmware, and application support across **hundreds of end equipment types**.
+- TI's organic connectivity efforts **will NOT be discontinued**. Ilan described the combination as acceleration, not replacement.
+
+### Synergy Deep Dive — $450M+ Target
+
+| Synergy Type | Detail |
+|-------------|--------|
+| **Total Annual Target** | >$450M within 3 years of close |
+| **COGS (>50% of total)** | Manufacturing reshoring from external foundries to TI 300mm fabs |
+| **OpEx ("more immediate")** | SG&A consolidation + certain fixed R&D functions |
+| **Revenue Synergies** | **Excluded** from the $450M — upside not modeled |
+
+**Key detail on COGS timeline:** Benefits build as products are ported, qualified, and customer approvals obtained. **Most transition work completed by ~2030**, potentially fully done by **2031 or 2032**.
+
+**Manufacturing specifics:**
+- Porting effort focused on **"somewhere between 10 and 15 dies"** — far more efficient than prior TI transitions involving hundreds of dies
+- **~75% of projected 2030 revenue** will be manufactured inside TI facilities
+- TI's **28nm node** specifically called out as optimized for SLAB's wireless portfolio
+
+### CFO Rafael Lizardi — Financials & Funding
+
+| Item | Detail |
+|------|--------|
+| **Incremental Debt** | ~$7B (investment-grade bonds + commercial paper) |
+| **Leverage Neutral** | Within **18–24 months** post-close |
+| **EPS Accretive** | First full year post-close (ex. transaction costs) |
+| **Capital Return** | Reiterates 100% FCF to shareholders via dividends + buybacks |
+
+### Q&A Highlights — Analyst Concerns & Responses
+
+**Portfolio Overlap:** TI's current wireless momentum is largely **automotive-focused**, while SLAB's automotive business is **less than 5%** of revenue. SLAB's strength is **industrial IoT** — minimal overlap, maximum complementarity.
+
+**Revenue Synergy Examples (not in model):** SLAB CEO Matt Johnson cited specific use cases where combined offerings could win: **continuous glucose monitors, electronic shelf labels, and utility metering** (gas, water, electric) — combining wireless compute with power management and analog.
+
+**Employee Mix:** ~70% of SLAB's ~1,800 employees are engineers — this is a talent acquisition as much as a product acquisition.
+
+**China Regulatory Risk:** Executives acknowledged China is **expected to be among the jurisdictions requiring regulatory approval**. No specific concerns flagged, but this is the biggest timeline risk.
+
+**SLAB Shareholder Vote:** Lizardi expects approval **"within a few months"** — should be straightforward given the 69% premium.
+
+### SLAB Q4 Results (Released Early Due to Deal)
+
+Silicon Labs also released Q4 earnings ahead of schedule:
+
+| Metric | Q4 2025 |
+|--------|---------|
+| **Revenue** | $208M (+25% YoY) |
+| **Industrial & Commercial** | $122M |
+| **Home & Life** | $87M |
+| **Forward Guidance** | **Suspended** (pending acquisition) |
 
 ---
 
@@ -153,20 +215,21 @@ Silicon Labs is **fabless** — their chips are made at foundries like TSMC. Pos
 
 ### Synergy Breakdown
 
-The **$450M annual synergy** target is significantly higher than our initial $100-200M estimate. This likely breaks down as:
-- **Manufacturing reshoring**: Moving SLAB from TSMC/external foundries to TI's 300mm fabs (biggest driver — foundry markup elimination)
-- **Operational consolidation**: Back-office, sales overlap, shared infrastructure
-- **Cross-sell revenue**: TI's direct sales channel pushing SLAB connectivity alongside analog
+The **$450M annual synergy** target is significantly higher than our initial $100-200M estimate. Per the webcast, the actual breakdown is:
+- **COGS (>50% of total)**: Manufacturing reshoring from external foundries to TI's 300mm fabs — the biggest driver. ~75% of 2030 revenue manufactured internally. Only 10-15 dies to port.
+- **OpEx ("more immediate")**: SG&A consolidation + fixed R&D overlap. Kicks in faster than COGS.
+- **Revenue synergies NOT included**: Cross-sell via TI's sales channel + ti.com is upside, not in the $450M model. "Alpha socket" strategy could drive significant attached content.
 
 ### Balance Sheet Impact
 
-| Metric | Pre-Deal | Post-Deal (est.) |
+| Metric | Pre-Deal | Post-Deal (confirmed) |
 |--------|----------|-----------|
-| **Cash** | ~$4B | ~$0-1B |
-| **Total Debt** | ~$12B | ~$16-19B |
-| **Debt/EBITDA** | 1.5x | ~2.0-2.2x |
+| **Cash** | ~$4B | Used for partial funding |
+| **Incremental Debt** | — | **~$7B** (IG bonds + commercial paper) |
+| **Total Debt** | ~$12B | ~$19B |
+| **Leverage Neutral** | — | **Within 18–24 months post-close** |
 
-Still conservative leverage for a company of TI's scale and cash generation. No financing contingency — TI has the capacity.
+Per CFO Lizardi on the webcast: TI expects to issue ~$7B in incremental debt, using a mix of investment-grade bonds and commercial paper. Leverage neutral within 18-24 months — still conservative for a company of TI's scale and cash generation.
 
 ---
 
@@ -236,7 +299,7 @@ This is a **high-conviction strategic move** from TI:
 ## What to Watch Next
 
 1. ~~**Deal Confirmation**~~ ✅ Done — $231/share, all-cash
-2. **TI Investor Webcast:** Today 7:00 AM CT — [investor.ti.com](https://investor.ti.com/upcoming-events)
+2. ~~**TI Investor Webcast:**~~ ✅ Done — see Webcast Highlights section above
 3. **Regulatory Review:** DOJ/FTC + international antitrust (expected H1 2027 close)
 4. **SLAB Stockholder Vote:** Proxy statement coming — should pass given the premium
 5. **Customer Reaction:** Will SLAB's biggest customers stay post-acquisition?
