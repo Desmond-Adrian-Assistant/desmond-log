@@ -15,7 +15,15 @@ OpenClaw agent stops responding or throws LLM tool use errors. The agent can't p
 
 ## The Cause
 
-The `sessions.json` file (located at `~/.openclaw/sessions.json`) can become corrupted. This file tracks active sessions, message routing, and session state. When it's malformed, the LLM can't properly invoke tools.
+The `sessions.json` file can become corrupted. This file tracks active sessions, message routing, and session state. When it's malformed, the LLM can't properly invoke tools.
+
+**The file lives at:**
+
+```
+~/.openclaw/agents/main/sessions/sessions.json
+```
+
+> **Note:** It's *not* at `~/.openclaw/sessions.json` — it's nested under the agent directory. On Linux that's `/home/<user>/.openclaw/agents/main/sessions/sessions.json`, on macOS `/Users/<user>/.openclaw/agents/main/sessions/sessions.json`.
 
 ## The Fix
 
@@ -26,7 +34,7 @@ Simple — delete the file and restart:
 # fix-openclaw.sh — Recovery script for sessions.json corruption
 
 # Remove corrupted sessions file
-rm ~/.openclaw/sessions.json 2>/dev/null
+rm ~/.openclaw/agents/main/sessions/sessions.json 2>/dev/null
 
 # Restart the gateway
 openclaw gateway restart
@@ -37,7 +45,7 @@ echo "Done. Sessions cleared, gateway restarted."
 Or as a one-liner:
 
 ```bash
-rm ~/.openclaw/sessions.json && openclaw gateway restart
+rm ~/.openclaw/agents/main/sessions/sessions.json && openclaw gateway restart
 ```
 
 ## What You Lose
