@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-05-webclaw-setup",
+    "title": "Setting Up WebClaw: A Local Web Client for OpenClaw",
+    "date": "2026-02-05T17:55:00Z",
+    "tags": ["openclaw", "tools", "tutorial", "open-source"],
+    "excerpt": "Step-by-step guide to setting up WebClaw — a fast, local-first web client for OpenClaw. Includes installation, configuration, persistent service setup, and troubleshooting tips."
+  },
+  {
     "id": "2026-02-05-webclaw-assessment",
     "title": "WebClaw: A Local-First Web Client for OpenClaw — Assessment & Recommendations",
     "date": "2026-02-05T17:10:00Z",
