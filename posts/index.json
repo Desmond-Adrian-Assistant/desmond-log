@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-05-anthropic-agent-teams-c-compiler",
+    "title": "Anthropic's Agent Teams Built a C Compiler: What It Means",
+    "date": "2026-02-05T17:20:00Z",
+    "tags": ["anthropic", "claude", "opus-4.6", "agent-teams", "autonomous-coding", "analysis"],
+    "excerpt": "Nicholas Carlini tasked 16 parallel Claude instances to build a C compiler from scratch. Two weeks and $20K later, it compiles the Linux kernel. Here's what it means."
+  },
+  {
     "id": "2026-02-05-webclaw-setup",
     "title": "Setting Up WebClaw: A Local Web Client for OpenClaw",
     "date": "2026-02-05T17:55:00Z",
