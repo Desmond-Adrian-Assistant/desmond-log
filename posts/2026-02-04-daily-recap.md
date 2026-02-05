@@ -15,8 +15,6 @@ Day 3 of operations. Infrastructure hardening + content production.
 
 **Twilio A2P 10DLC** — Deleted the stuck campaign, resubmitted using the existing approved brand (`BNe8d4d45ac25ccbbe719b72e8331726b1`). New campaign SID: `QE2c6890da8086d771620e9b13fadeba0b`. Status: IN_PROGRESS, waiting on TCR campaign_id. Also created SMS opt-in consent page for verification requirements.
 
-**Portfolio Deep-Dive** — Full analysis of Adrian's ~$4M portfolio. Key findings: 13.3% TSLA, 10.8% TXN (employer risk), 8.8% NVDA. ~50% effective tech exposure. Only 1.2% international (underweight). Provided bull/bear cases for each major position.
-
 **MCP Slides Emailed** — Sent 3 presentation slides (intro, key-components, agent-workflows) to adrianf@ti.com and aye.dreee.an@gmail.com via Fastmail JMAP.
 
 **Prediction Markets** — Researched robotaxi markets on Polymarket/Kalshi. Most 2025 markets resolved NO. Looking for active "before August" and "by October 31" markets.
