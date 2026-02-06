@@ -10,6 +10,30 @@ tags: [ai, eda, chip-design, cadence, semiconductors, deep-dive]
 
 ---
 
+## TL;DR: What Does "AI" Mean Here?
+
+Before diving in, let's be clear about what Cadence means by "AI":
+
+| AI Type | What It Actually Does |
+|---------|----------------------|
+| **Optimization AI** | Runs thousands of experiments to find best design parameters (like hyperparameter tuning) |
+| **Generative AI** | Creates new designs (placements, routes) based on learned patterns |
+| **Predictive AI** | Forecasts issues (IR drop, timing) before full analysis |
+| **Classification AI** | Categorizes bugs, identifies root causes from symptoms |
+
+This is **NOT** chatbot AI. It's ML/optimization applied to specific engineering problems.
+
+### Version Requirements Quick Reference
+
+| Tool | Min Version | Cloud Required? |
+|------|-------------|-----------------|
+| **Allegro X AI** | v25.1+ | Yes (on-prem coming) |
+| **Cerebrus** | N/A (separate product) | Optional |
+| **Verisium** | N/A (separate product) | No |
+| **Voltus InsightAI** | N/A (separate product) | No |
+
+---
+
 ## The Big Picture: Cadence.AI
 
 Cadence has unified their AI efforts under the **Cadence.AI** umbrella, covering:
@@ -148,33 +172,77 @@ Fully integrated with:
 
 **What it does:** Generative AI for PCB layout automation
 
-**Key capabilities:**
-- **Automated placement** — AI places components optimally
-- **Metal pouring** — Automatic power/ground plane generation
-- **Critical net routing** — AI routes sensitive signals
-- **Design space exploration** — Generates multiple layout options
-- **SI/PI integration** — Built-in signal/power integrity analysis
+### ⚠️ Version Requirement: Allegro X 25.1+
+
+The AI features require **Allegro X version 25.1 or later**. If you're on v25.0 or earlier, you won't have access to these capabilities.
 
 ![Allegro X Platform](/assets/cadence-allegro-x-platform.jpg)
 *Allegro X Design Platform with AI capabilities*
 
-**How it works:**
-The AI leverages machine learning to compose previous design solutions into new configurations. It frames PCB synthesis as a multi-objective optimization problem:
-- Minimize board area
-- Optimize signal integrity
-- Meet thermal constraints
-- Satisfy manufacturing rules
+### What the AI Actually Does (Practical Examples)
 
-**Results claimed:**
-- 10X reduction in turnaround time
+| AI Feature | What It Does | Manual Equivalent |
+|------------|--------------|-------------------|
+| **AI Placement** | Automatically places components based on constraints, thermal requirements, and signal integrity rules | Engineer manually dragging & positioning each component, iterating placement |
+| **AI Routing** | Routes critical nets (DDR, high-speed serial) with length matching, impedance control | Manual routing with constant DRC checking |
+| **AI Substrate Router** | Optimizes routing for high-density multi-chip packages (new in 25.1) | Tedious via fanout and escape routing by hand |
+| **Metal Pouring** | Generates power/ground planes automatically avoiding keep-outs | Manual shape creation and void management |
+| **Design Space Exploration** | Generates multiple layout alternatives to compare | Running multiple manual iterations |
+
+### Specific AI Capabilities
+
+**1. Automated Component Placement**
+- AI analyzes netlist connectivity and constraint requirements
+- Generates optimal component positions considering:
+  - Signal integrity (short, matched traces)
+  - Thermal dissipation (spreading hot components)
+  - Manufacturing rules (assembly clearances)
+- Outputs multiple placement options ranked by score
+
+**2. Critical Net Routing**
+- AI routes sensitive signals like DDR4/5, PCIe, USB
+- Automatically handles:
+  - Length matching within tolerance
+  - Differential pair spacing
+  - Reference plane transitions
+  - Via placement optimization
+
+**3. Power/Ground Plane Generation**
+- AI creates solid or split planes
+- Handles keep-outs and anti-pads automatically
+- Optimizes for current distribution
+
+**4. Design Alternative Exploration**
+- Input: Constraints + netlist
+- Output: Multiple complete/partial layouts
+- Engineers review and select best option
+
+### Cloud vs On-Premise
+
+| Deployment | Status |
+|------------|--------|
+| **Cadence Cloud (AWS)** | ✅ Available now |
+| **On-premise** | 🔜 Coming soon |
+
+**Data security:** Cadence states your design data is protected and not accessible to Cadence or third parties during AI processing.
+
+### How to Access in Allegro X 25.1+
+
+1. Must have OrCAD X or Allegro X release **25.1 or above**
+2. Need separate Allegro X AI license/subscription
+3. AI features accessed directly within PCB design interface
+4. Requires internet connection (cloud processing)
+
+### Results Claimed
+- **10X reduction** in turnaround time
 - Automated exploration of design alternatives
-- Streamlined system design process
-
-**Cloud requirement:** Allegro X AI runs on Cadence's cloud (AWS-hosted)
+- More experimentation upfront before committing to hardware
+- Engineers focus on high-value decisions, AI handles tedious tasks
 
 **Links:**
 - [Allegro X Design Platform](https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/allegro-x-design-platform.html)
 - [Allegro X AI White Paper](https://www.cadence.com/en_US/home/resources/white-papers/allegro-x-ai-for-generative-system-design-wp.html)
+- [EMA Design Automation - Allegro X AI](https://www.ema-eda.com/products/cadence-allegro/allegro-x-ai-overview/)
 
 ---
 
