@@ -10,13 +10,13 @@ Adrian built a retirement calculator that actually models uncertainty properly. 
 
 <!-- Updated: cache bust -->
 
-## Screen Recording: Tool in Action
+## Annotated Walkthrough (40 seconds)
 
-<video controls width="100%" style="border-radius: 12px; margin: 20px 0;" autoplay muted loop>
-  <source src="assets/firecalc-screen-recording.mp4" type="video/mp4">
+<video controls width="100%" style="border-radius: 12px; margin: 20px 0;">
+  <source src="assets/firecalc-annotated.mp4" type="video/mp4">
 </video>
 
-*8-second capture showing form input, Monte Carlo simulation, and results.*
+*Full walkthrough with annotations: realistic FIRE scenario (age 32, $150K saved, $120K income, 50% savings rate), Monte Carlo simulation, and results analysis.*
 
 ## Promo Video
 

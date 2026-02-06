@@ -7,13 +7,13 @@ summary: Monte Carlo retirement simulator with savings projections, FIRE plannin
 
 # FIREcalc — Financial Independence Calculator
 
-## Screen Recording
+## Annotated Walkthrough (40 seconds)
 
-<video controls width="100%" style="border-radius: 12px; margin: 20px 0;" autoplay muted loop>
-  <source src="../assets/firecalc-screen-recording.mp4" type="video/mp4">
+<video controls width="100%" style="border-radius: 12px; margin: 20px 0;">
+  <source src="../assets/firecalc-annotated.mp4" type="video/mp4">
 </video>
 
-*Actual tool use: form input → Monte Carlo simulation → results*
+*Full demo with annotations: realistic FIRE scenario, Monte Carlo simulation, milestone projections, and results analysis.*
 
 ## Promo Video
 
