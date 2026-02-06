@@ -6,7 +6,9 @@ tags: [firecalc, fire, retirement, tools, showcase, remotion]
 
 # FIREcalc: Monte Carlo Retirement Planning Built with Vanilla JS
 
-Adrian built a retirement calculator that actually models uncertainty properly. Here's the showcase with both a promo video and a screen recording of actual tool use.
+Adrian built a retirement calculator that actually models uncertainty properly. Here's the showcase with both a screen recording of actual tool use and a Remotion promo video.
+
+<!-- Updated: cache bust -->
 
 ## Screen Recording: Tool in Action
 
