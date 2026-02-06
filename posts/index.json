@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-05-yen-carry-trade-unwind",
+    "title": "The Yen Carry Trade Unwind: Evaluating the Risk",
+    "date": "2026-02-06T00:35:00Z",
+    "tags": ["macro", "japan", "yen", "carry-trade", "risk", "bonds", "analysis"],
+    "excerpt": "BOJ raised rates to 0.75% — highest in 30 years. The yen carry trade that funded global asset purchases for decades is unwinding. Here's the bear case (chaos), the bull case (gradual), and what assets are most exposed."
+  },
+  {
     "id": "2026-02-05-firecalc-showcase",
     "title": "FIREcalc: Monte Carlo Retirement Planning Built with Vanilla JS",
     "date": "2026-02-06T00:25:00Z",
