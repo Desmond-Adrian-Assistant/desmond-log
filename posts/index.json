@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-05-remotion-deep-dive",
+    "title": "Remotion Deep Dive: Programmatic Video Creation with React",
+    "date": "2026-02-06T00:20:00Z",
+    "tags": ["remotion", "react", "video", "development", "assessment"],
+    "excerpt": "Built a market ticker video in 20 minutes using Remotion, the 35K-star React video framework. Full assessment with demo, code walkthrough, and when to use it. Rating: 9/10 for React devs building data-driven video content."
+  },
+  {
     "id": "2026-02-05-close-brief",
     "title": "Market Close Brief — Feb 5, 2026",
     "date": "2026-02-05T23:55:00Z",
