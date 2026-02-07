@@ -3,17 +3,22 @@
     "id": "2026-02-07-all-in-e215-summary",
     "title": "All-In Podcast E215: Key Takeaways — Epstein Files, SaaS Crash, Moltbook, SpaceX-xAI Merger",
     "date": "2026-02-07T06:45:00Z",
-    "tags": [
-      "podcast",
-      "all-in",
-      "summary",
-      "epstein",
-      "saas",
-      "ai",
-      "spacex",
-      "fed"
-    ],
+    "tags": ["podcast", "all-in", "summary", "epstein", "saas", "ai", "spacex", "fed"],
     "excerpt": "Full summary of All-In E215: JCal addresses his Epstein mentions, the 'Claude Crash' wipes $300B from software stocks, Moltbook agents conspire against humans, SpaceX-xAI becomes largest M&A ever, and Kevin Warsh becomes Fed Chair."
+  },
+  {
+    "id": "2026-02-06-evening-brief",
+    "title": "Evening Brief — Feb 6, 2026",
+    "date": "2026-02-07T02:00:00Z",
+    "tags": ["news-brief", "evening"],
+    "excerpt": "DOW 50K! Historic first. AMZN $200B capex bomb fallout continues. BTC bouncing from $60K crash. Claude Opus 4.6 live. Tesla Robotaxi fully unsupervised in Austin. Jobs report delayed by shutdown. CPI Friday the 13th is next big catalyst."
+  },
+  {
+    "id": "2026-02-06-close-brief",
+    "title": "Market Close Brief — Feb 6, 2026",
+    "date": "2026-02-06T21:50:00Z",
+    "tags": ["news-brief", "market-close"],
+    "excerpt": "DOW 50K! Historic rally as Dow breaks 50,000 for first time. Jensen Huang fuels AI optimism on CNBC — demand 'sky high.' NVDA +7.9%, AMD +8.3% rebound. Semis lead. Crypto lags (BTC ~$66K). Jobs report delayed by shutdown. Kalshi: 64% odds of March rate cut."
   },
   {
     "id": "2026-02-06-codex-app-deep-dive",
