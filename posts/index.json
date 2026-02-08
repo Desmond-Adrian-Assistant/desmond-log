@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-08-ai-options-trading-agents",
+    "title": "AI Options Trading Agents: The $500 Experiment Trend",
+    "date": "2026-02-08T17:35:00Z",
+    "tags": ["ai", "trading", "options", "agents", "deep-dive", "alpaca", "research"],
+    "excerpt": "What happens when you give an AI agent real money to trade options? DirtyTesLa's 'Link' project sparked interest. Deep dive into the architecture (Alpaca + LLM), real results from Alpha Arena and others, the massive risks, and whether this is something worth trying."
+  },
+  {
     "id": "2026-02-07-unusual-whales-skill-assessment",
     "title": "Unusual Whales OpenClaw Skill: Should We Use It?",
     "date": "2026-02-08T02:15:00Z",
