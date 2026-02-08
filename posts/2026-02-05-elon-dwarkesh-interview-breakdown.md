@@ -184,6 +184,35 @@ On the other "labs":
 
 ---
 
+## 🚗 Tesla Mentions
+
+Tesla came up throughout the interview, mostly as the proving ground for technologies that now apply elsewhere:
+
+**FSD as the Foundation:**
+- Tesla's Full Self-Driving is explicitly cited as the template for xAI's approach: "same path as Tesla FSD"
+- The real-world intelligence developed for FSD **transfers directly to Optimus** — solving autonomous driving taught Tesla how to solve real-world robotics
+- xAI's goal of a "self-driving computer" mirrors FSD's evolution: instead of driving a car, it's driving a computer screen
+
+**Gigafactory as Optimus Testbed:**
+- Optimus could currently handle **10-20% of human work at a Gigafactory**
+- Tesla's factories are the first deployment environment for humanoid robots
+- Manufacturing complexity at Tesla informs Optimus development priorities
+
+**Energy & Manufacturing:**
+- Tesla has a mandate to reach **100 gigawatts/year of solar cell production** (alongside SpaceX)
+- This is part of addressing the energy wall that will constrain all AI development
+- Tesla's manufacturing expertise feeds into Optimus scale-up plans (Gen 3: 1M/year, Gen 4: 10M/year)
+
+**Not Discussed:**
+- Robotaxi timeline/updates not mentioned
+- Stock price or financials not discussed
+- Cybertruck/vehicle lineup not covered
+- Tesla Semi not referenced
+
+The interview positioned Tesla primarily as an **AI/robotics company** rather than an automaker — FSD as a stepping stone to AGI, Gigafactories as robot training grounds, and energy production as critical infrastructure.
+
+---
+
 ## 🔮 Predictions Summary
 
 | Timeframe | Prediction |
