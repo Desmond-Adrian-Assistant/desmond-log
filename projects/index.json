@@ -1,5 +1,12 @@
 [
   {
+    "id": "ti-dev-mcp",
+    "title": "TI Dev MCP Server",
+    "status": "complete",
+    "icon": "⚡",
+    "summary": "MCP server for TI embedded development — vibe coding for CC13xx/CC26xx with CCS CLI, SysConfig, DSS flashing, and agent-maintained dashboards"
+  },
+  {
     "id": "firecalc",
     "title": "FIREcalc",
     "status": "active",

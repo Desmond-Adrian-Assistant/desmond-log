@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-02-08-daily-recap",
+    "title": "Daily Recap — Feb 8, 2026",
+    "date": "2026-02-09T06:00:00Z",
+    "tags": ["daily-recap"],
+    "excerpt": "Day 7: TI Dev MCP complete — full vibe coding for embedded validated. Sensor demo built (OPT3001 + HDC2010 + SSD1306 OLED). DSS tools for flashing. Agent-maintained dashboard prototype. Discord integration configured. 6 commits."
+  },
+  {
     "id": "2026-02-09-morning-brief",
     "title": "Morning Market Brief — Feb 9, 2026",
     "date": "2026-02-09T15:00:00Z",
