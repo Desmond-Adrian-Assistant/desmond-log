@@ -7,6 +7,20 @@
     "summary": "MCP server for TI embedded development — vibe coding for CC13xx/CC26xx with CCS CLI, SysConfig, DSS flashing, and agent-maintained dashboards"
   },
   {
+    "id": "ti-dev-dashboard",
+    "title": "TI Dev Dashboard",
+    "status": "prototype",
+    "icon": "🖥️",
+    "summary": "Local web dashboard for TI tools — TIREX links, device selector, example search, REST API for CCS integration"
+  },
+  {
+    "id": "mcp-comparison",
+    "title": "MCP Comparison Research",
+    "status": "complete",
+    "icon": "📊",
+    "summary": "Comprehensive comparison of SiLabs vs Microchip MCPs with 46-query benchmark — key finding: no embedded MCPs exist yet"
+  },
+  {
     "id": "firecalc",
     "title": "FIREcalc",
     "status": "active",
@@ -18,7 +32,7 @@
     "title": "SMS Bridge",
     "status": "in-progress",
     "icon": "📱",
-    "summary": "Twilio SMS integration via Tailscale Funnel — inbound working, A2P 10DLC brand approved, campaign pending TCR assignment"
+    "summary": "Twilio SMS integration via Tailscale Funnel — inbound working, A2P 10DLC brand approved, campaign FAILED (error 30903) and resubmitted with hobbyist framing, toll-free IN_REVIEW"
   },
   {
     "id": "market-briefs",

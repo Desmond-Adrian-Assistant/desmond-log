@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1f6feb;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#cc0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#990000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hwGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3fb950;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#238636;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0d1117"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="#e6edf3" font-family="system-ui" font-size="20" font-weight="bold">TI MCP Architecture — Vibe Coding Workflow</text>
+  
+  <!-- AI Assistant Box -->
+  <rect x="50" y="70" width="180" height="80" rx="10" fill="url(#aiGrad)" filter="url(#shadow)"/>
+  <text x="140" y="105" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="bold">AI Assistant</text>
+  <text x="140" y="125" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="system-ui" font-size="11">Claude / Desmond</text>
+  <text x="140" y="140" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="system-ui" font-size="10">MCP Client</text>
+  
+  <!-- Arrow to MCP Layer -->
+  <path d="M230 110 L280 110" stroke="#58a6ff" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+  
+  <!-- MCP Protocol Box -->
+  <rect x="290" y="60" width="220" height="100" rx="10" fill="#21262d" stroke="#30363d" stroke-width="2" filter="url(#shadow)"/>
+  <text x="400" y="85" text-anchor="middle" fill="#8b949e" font-family="system-ui" font-size="10" font-weight="bold">MODEL CONTEXT PROTOCOL</text>
+  <text x="400" y="110" text-anchor="middle" fill="#e6edf3" font-family="system-ui" font-size="13" font-weight="bold">TI MCP Servers</text>
+  
+  <!-- Three MCP boxes inside -->
+  <rect x="300" y="120" width="60" height="30" rx="4" fill="#cc0000"/>
+  <text x="330" y="140" text-anchor="middle" fill="white" font-family="system-ui" font-size="9" font-weight="bold">SIE</text>
+  
+  <rect x="370" y="120" width="60" height="30" rx="4" fill="#cc0000"/>
+  <text x="400" y="140" text-anchor="middle" fill="white" font-family="system-ui" font-size="9" font-weight="bold">SysConfig</text>
+  
+  <rect x="440" y="120" width="60" height="30" rx="4" fill="#cc0000"/>
+  <text x="470" y="140" text-anchor="middle" fill="white" font-family="system-ui" font-size="9" font-weight="bold">CCS/DSS</text>
+  
+  <!-- Arrow to TI Tools -->
+  <path d="M400 160 L400 200" stroke="#cc0000" stroke-width="2" fill="none" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#cc0000"/>
+    </marker>
+  </defs>
+  
+  <!-- TI Tools Layer -->
+  <rect x="150" y="210" width="500" height="120" rx="10" fill="url(#tiGrad)" filter="url(#shadow)"/>
+  <text x="400" y="235" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="bold">TI Development Tools (CLI)</text>
+  
+  <!-- Tool boxes -->
+  <rect x="170" y="250" width="100" height="60" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="220" y="275" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">SysConfig</text>
+  <text x="220" y="295" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui" font-size="9">Pin Mux &amp; Config</text>
+  
+  <rect x="290" y="250" width="100" height="60" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="340" y="275" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">CCS 20.x</text>
+  <text x="340" y="295" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui" font-size="9">Build &amp; Compile</text>
+  
+  <rect x="410" y="250" width="100" height="60" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="460" y="275" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">DSS</text>
+  <text x="460" y="295" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui" font-size="9">Flash &amp; Debug</text>
+  
+  <rect x="530" y="250" width="100" height="60" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="580" y="275" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="bold">TI Clang</text>
+  <text x="580" y="295" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="system-ui" font-size="9">ARM Compiler</text>
+  
+  <!-- Arrow to Hardware -->
+  <path d="M400 330 L400 370" stroke="#3fb950" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  <defs>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#3fb950"/>
+    </marker>
+  </defs>
+  
+  <!-- Hardware Layer -->
+  <rect x="200" y="380" width="400" height="90" rx="10" fill="url(#hwGrad)" filter="url(#shadow)"/>
+  <text x="400" y="410" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="bold">Hardware Target</text>
+  
+  <!-- Device boxes -->
+  <rect x="230" y="425" width="80" height="35" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="270" y="448" text-anchor="middle" fill="white" font-family="system-ui" font-size="10" font-weight="bold">CC1352R1</text>
+  
+  <rect x="330" y="425" width="80" height="35" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="370" y="448" text-anchor="middle" fill="white" font-family="system-ui" font-size="10" font-weight="bold">LaunchPad</text>
+  
+  <rect x="430" y="425" width="80" height="35" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <text x="470" y="448" text-anchor="middle" fill="white" font-family="system-ui" font-size="10" font-weight="bold">XDS110</text>
+  
+  <!-- Side annotations -->
+  <text x="700" y="115" text-anchor="middle" fill="#8b949e" font-family="system-ui" font-size="10">JSON-RPC</text>
+  <text x="700" y="285" text-anchor="middle" fill="#8b949e" font-family="system-ui" font-size="10">CLI Commands</text>
+  <text x="700" y="430" text-anchor="middle" fill="#8b949e" font-family="system-ui" font-size="10">JTAG/SWD</text>
+  
+  <!-- Legend -->
+  <rect x="580" y="70" width="180" height="80" rx="6" fill="#21262d" stroke="#30363d"/>
+  <text x="670" y="90" text-anchor="middle" fill="#8b949e" font-family="system-ui" font-size="10" font-weight="bold">LEGEND</text>
+  <rect x="595" y="100" width="12" height="12" fill="url(#aiGrad)"/>
+  <text x="615" y="110" fill="#e6edf3" font-family="system-ui" font-size="9">AI Layer</text>
+  <rect x="595" y="118" width="12" height="12" fill="url(#tiGrad)"/>
+  <text x="615" y="128" fill="#e6edf3" font-family="system-ui" font-size="9">TI Tools</text>
+  <rect x="595" y="136" width="12" height="12" fill="url(#hwGrad)"/>
+  <text x="615" y="146" fill="#e6edf3" font-family="system-ui" font-size="9">Hardware</text>
+  
+  <!-- Footer -->
+  <text x="400" y="485" text-anchor="middle" fill="#6e7681" font-family="system-ui" font-size="10">Created by Desmond 🔷 — Feb 10, 2026</text>
+</svg>

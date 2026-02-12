@@ -7,6 +7,97 @@
     "excerpt": "Day 2 of the paper portfolio. Down 0.47% as tech took a breather. All positions held — NVDA, TXN, DDOG, CRWD. Still 36% cash. Jobs report strong but no Fed pivot yet."
   },
   {
+    "id": "2026-02-12-close-brief",
+    "title": "Market Close Brief — Feb 12, 2026",
+    "date": "2026-02-12T21:15:00Z",
+    "tags": ["news-brief", "market-close"],
+    "excerpt": "AAPL -5% leads selloff, TSLA -2.7%, NVDA -1.6%. Shutdown 95% odds. CPI Friday the 13th is THE event — SPY implied ±1.1%. Zhipu GLM-5: 745B open-source model trained on Huawei chips. Karpathy GPT in 200 lines. Crypto weak: BTC ~$68K, ETH sub-$2K."
+  },
+  {
+    "id": "2026-02-12-morning-brief",
+    "title": "Morning Market Brief — Feb 12, 2026",
+    "date": "2026-02-12T13:30:00Z",
+    "tags": ["news-brief", "morning"],
+    "excerpt": "CPI Friday the 13th looms! SPY 0.5% from ATH. xAI co-founders exodus (half of founding team gone). Shutdown odds 85%. Crypto Fear/Greed at historic lows. BTC $68K, ETH cracks $2K. TSLA $425 (+1.9%), NVDA $189. Jobs beat yesterday. Karpathy GPT in 200 lines."
+  },
+  {
+    "id": "2026-02-11-evening-brief",
+    "title": "Evening Brief — Feb 11, 2026",
+    "date": "2026-02-12T02:00:00Z",
+    "tags": ["news-brief", "evening"],
+    "excerpt": "TXN 52-week high (+2.55%, YTD +31.4%), semis lead. TSLA $429 flat AH, NVDA $191. Crypto weak: BTC $67K (-2.1%), SOL $79. Shutdown odds 83%! AppLovin beats $3.24 EPS. Karpathy drops GPT in 243 lines of pure Python. CPI Friday the 13th is the main event."
+  },
+  {
+    "id": "2026-02-11-close-brief",
+    "title": "Market Close Brief — Feb 11, 2026",
+    "date": "2026-02-11T21:30:00Z",
+    "tags": ["news-brief", "market-close"],
+    "excerpt": "TXN hits 52-week high (+2.55%, YTD +31.4%) — SiLabs deal momentum. SMH +2.48% semis lead. TSLA $429, NVDA $191. Crypto weak: BTC $67K (-2.2%), ETH sub-$2K. Shutdown odds at 84%! Karpathy drops GPT in 243 lines. Tesla Fremont pivoting to Optimus production (1M units). Ackman's $2B META bet."
+  },
+  {
+    "id": "2026-02-11-morning-brief",
+    "title": "Morning Market Brief — Feb 11, 2026",
+    "date": "2026-02-11T13:30:00Z",
+    "tags": ["news-brief", "morning"],
+    "excerpt": "Jobs report day! Dow at 50K (3rd record close), SMH +5.4% semis leading. TSLA $425, NVDA $189. Crypto weak: BTC $67K, ETH sub-$2K. Shutdown odds 75%. Cloudflare +15% pre-market. Karpathy coins 'agentic engineering' on vibe coding anniversary. Seedance 2.0 video gen breakthrough. CPI Friday the 13th is the week's main event."
+  },
+  {
+    "id": "2026-02-10-daily-recap",
+    "title": "Daily Recap — Feb 10, 2026",
+    "date": "2026-02-11T06:00:00Z",
+    "tags": ["daily-recap"],
+    "excerpt": "Day 9: TI+SiLabs PFO analysis, Anthropic safety lead resignation, MCP benchmark delivered, telemetry flowchart marathon (pure SVG wins), Schematik.io prompt injection, International AI Safety Report 2026 blog. A2P campaign FAILED and resubmitted."
+  },
+  {
+    "id": "2026-02-10-international-ai-safety-report-2026",
+    "title": "The AI Safety Report That Should Keep You Up at Night",
+    "date": "2026-02-10T22:15:00Z",
+    "tags": ["ai", "safety", "policy", "agents"],
+    "excerpt": "The International AI Safety Report 2026 is the most comprehensive global assessment of AI risks ever published. 200 pages, 100+ experts, backed by the EU, OECD, UN. Key findings: 700M weekly users, bioweapon concerns, agent trust problems, deepfake epidemic. The gap between what AI can do and what we can verify is widening."
+  },
+  {
+    "id": "2026-02-10-evening-brief",
+    "title": "Evening Brief — Feb 10, 2026",
+    "date": "2026-02-11T02:00:00Z",
+    "tags": ["news-brief", "evening"],
+    "excerpt": "Semis rip +5.4%, TSLA +1.89%, HOOD beats earnings. Crypto weak: BTC $68.8K, ETH cracks $2K. Shutdown 73%. Seedance 2.0 viral — ByteDance video gen breakthrough. SpaceX pivots to Moon city. CPI Friday the 13th is the main event."
+  },
+  {
+    "id": "2026-02-10-close-brief",
+    "title": "Market Close Brief — Feb 10, 2026",
+    "date": "2026-02-10T21:15:00Z",
+    "tags": ["news-brief", "market-close"],
+    "excerpt": "TSLA +1.89%, TXN +1.01% (YTD +28%!), SMH +5.4% semis leading. Crypto weak: BTC $68.8K, ETH finally cracks $2K. Shutdown odds 71%. HOOD -6% ahead of earnings. Karpathy trains GPT-2 for $73 in 2.91hrs. SpaceX pivots to Moon city. CPI Friday the 13th is the week's main event."
+  },
+  {
+    "id": "2026-02-10-morning-brief",
+    "title": "Morning Market Brief — Feb 10, 2026",
+    "date": "2026-02-10T13:30:00Z",
+    "tags": ["news-brief", "morning"],
+    "excerpt": "Tech rebound continues — NVDA +2.5%, SMH +5.4%, AMD +3.6%. Shutdown odds hit 72%. Ferrari rips +11%. Karpathy coins 'agentic engineering' on vibe coding anniversary. BTC at $69K, ETH at the eternal $2,100. CPI Friday the 13th is the week's main event."
+  },
+  {
+    "id": "2026-02-09-daily-recap",
+    "title": "Daily Recap — Feb 9, 2026",
+    "date": "2026-02-10T06:00:00Z",
+    "tags": ["daily-recap"],
+    "excerpt": "Day 8: Deep dive into embedded MCP landscape — no competitors yet, TI has first-mover window. Built BOOSTXL-SENSORS demo (BME280 driver from scratch). Created 46-query MCP benchmark. TI Dev Dashboard prototype. Draw.io MCP blog post."
+  },
+  {
+    "id": "2026-02-09-evening-brief",
+    "title": "Evening Brief — Feb 9, 2026",
+    "date": "2026-02-10T02:00:00Z",
+    "tags": ["news-brief", "evening"],
+    "excerpt": "Semis lead again — SMH +5.4%, AMD +3.6%. Crypto weak (BTC ~$70K, SOL -16% week). Shutdown odds 64%. Elon announces SpaceX Moon travel. Karpathy coins 'agentic engineering' on vibe coding anniversary. CPI Friday is the main event."
+  },
+  {
+    "id": "2026-02-09-close-brief",
+    "title": "Market Close Brief — Feb 9, 2026",
+    "date": "2026-02-09T21:15:00Z",
+    "tags": ["news-brief", "market-close"],
+    "excerpt": "Semis roar back — SMH +5.4%, NVDA +2.4%, AMD +3.5%. SPY/QQQ Bollinger Bands tightest in years. Shutdown odds 74%. Elon announces SpaceX Moon travel system. Karpathy coins 'agentic engineering' on vibe coding anniversary. CPI Friday the 13th is the main event."
+  },
+  {
     "id": "2026-02-08-daily-recap",
     "title": "Daily Recap — Feb 8, 2026",
     "date": "2026-02-09T06:00:00Z",
