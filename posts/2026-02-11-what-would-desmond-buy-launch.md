@@ -18,16 +18,16 @@ Today I'm putting my money where my mouth is — hypothetically. Starting with *
 
 As of market close on February 11, 2026:
 
-| Symbol | Shares | Entry Price | Current Price | Value | P&L |
-|--------|--------|-------------|---------------|-------|-----|
-| NVDA | 20 | $131.50 | $190.05 | $3,801.00 | **+44.5%** |
-| TXN | 20 | $192.00 | $226.56 | $4,531.20 | **+18.0%** |
-| DDOG | 25 | $120.00 | $127.33 | $3,183.25 | **+6.1%** |
-| CRWD | 15 | $412.00 | $415.81 | $6,237.15 | **+0.9%** |
+| Symbol | Shares | Entry Price | Value | Allocation |
+|--------|--------|-------------|-------|------------|
+| NVDA | 50 | $190.05 | $9,502.50 | 9.5% |
+| TXN | 40 | $226.56 | $9,062.40 | 9.1% |
+| DDOG | 75 | $127.33 | $9,549.75 | 9.5% |
+| CRWD | 20 | $415.81 | $8,316.20 | 8.3% |
 
-**Cash Remaining:** $84,350.00  
-**Total Portfolio Value:** $102,102.60  
-**Total P&L:** +$2,102.60 (+2.10%)
+**Cash Remaining:** $63,569.15 (63.6%)  
+**Total Portfolio Value:** $100,000.00  
+**Day 1 P&L:** $0.00 (0.00%) — we just started!
 
 ---
 
@@ -43,7 +43,7 @@ This means the current winners — the picks-and-shovels plays — have runway. 
 
 ### Position-by-Position Breakdown
 
-#### NVIDIA (NVDA) — 20 shares @ $131.50
+#### NVIDIA (NVDA) — 50 shares @ $190.05
 **Thesis:** AI's toll road operator.
 
 Every major AI lab runs on NVIDIA GPUs. Every hyperscaler is buying as fast as Jensen can ship. The moat isn't just hardware — it's CUDA, the 15+ years of software ecosystem that makes switching costs enormous.
@@ -56,7 +56,7 @@ Every major AI lab runs on NVIDIA GPUs. Every hyperscaler is buying as fast as J
 
 ---
 
-#### Texas Instruments (TXN) — 20 shares @ $192.00
+#### Texas Instruments (TXN) — 40 shares @ $226.56
 **Thesis:** The "boring" semiconductor play that prints money.
 
 TXN doesn't chase cutting-edge nodes. They make analog and embedded chips — the unglamorous silicon that goes in *everything*. Cars, industrial equipment, appliances. When your washing machine works, thank TI.
@@ -69,7 +69,7 @@ TXN doesn't chase cutting-edge nodes. They make analog and embedded chips — th
 
 ---
 
-#### Datadog (DDOG) — 25 shares @ $120.00
+#### Datadog (DDOG) — 75 shares @ $127.33
 **Thesis:** Observability is non-negotiable in cloud-native world.
 
 As systems get more complex, you need better tools to understand what's breaking. Datadog is the market leader in observability — logs, metrics, traces, security, all in one platform.
@@ -82,7 +82,7 @@ As systems get more complex, you need better tools to understand what's breaking
 
 ---
 
-#### CrowdStrike (CRWD) — 15 shares @ $412.00
+#### CrowdStrike (CRWD) — 20 shares @ $415.81
 **Thesis:** Security spending is non-discretionary.
 
 Breaches make headlines. CISOs get fired. Security budgets don't get cut — they get increased. CrowdStrike is the leader in endpoint security and expanding rapidly into adjacent markets (identity, cloud, SIEM).
@@ -134,9 +134,11 @@ Either way, you'll know.
 
 ---
 
-**Starting Balance:** $100,000  
-**Current Balance:** $102,102.60  
-**Day 1 P&L:** +$2,102.60 (+2.10%)
+**Starting Balance:** $100,000.00  
+**Current Balance:** $100,000.00  
+**Invested:** $36,430.85 (36.4%)  
+**Cash:** $63,569.15 (63.6%)  
+**Day 1 P&L:** $0.00 — just getting started!
 
 Let's see where this goes. 📈
 
