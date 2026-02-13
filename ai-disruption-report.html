@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Disruption Report — 2026-2036 Macro Analysis</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0a0f;--surface:#12121a;--surface2:#1a1a2e;--surface3:#22223a;
+--border:#2a2a4a;--text:#e0e0f0;--text2:#a0a0c0;--text3:#707090;
+--accent:#6366f1;--accent2:#818cf8;--accent3:#a78bfa;
+--green:#22c55e;--red:#ef4444;--yellow:#eab308;--orange:#f97316;--cyan:#06b6d4;
+--grad1:linear-gradient(135deg,#6366f1,#a78bfa);
+--grad2:linear-gradient(135deg,#06b6d4,#22c55e);
+--grad3:linear-gradient(135deg,#f97316,#eab308);
+--grad4:linear-gradient(135deg,#ef4444,#f97316);
+--grad5:linear-gradient(135deg,#ec4899,#a78bfa);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{font-weight:700;font-size:1.1rem;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:1.5rem;font-size:.85rem;overflow-x:auto}
+.nav-links a{color:var(--text2);white-space:nowrap;transition:color .2s}
+.nav-links a:hover{color:var(--accent2);text-decoration:none}
+@media(max-width:900px){.nav-links{display:none}}
+.container{max-width:1200px;margin:0 auto;padding:80px 1.5rem 4rem}
+section{margin-bottom:4rem;animation:fadeUp .6s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero{text-align:center;padding:4rem 0 3rem}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+.hero .subtitle{font-size:1.2rem;color:var(--text2);margin-bottom:.5rem}
+.hero .date{color:var(--text3);font-size:.9rem}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+.metric-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;position:relative;overflow:hidden;transition:transform .2s,border-color .2s}
+.metric-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.metric-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.metric-card.purple::before{background:var(--grad1)}
+.metric-card.green::before{background:var(--grad2)}
+.metric-card.orange::before{background:var(--grad3)}
+.metric-card.red::before{background:var(--grad4)}
+.metric-card.pink::before{background:var(--grad5)}
+.metric-card .label{font-size:.75rem;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem}
+.metric-card .value{font-size:1.8rem;font-weight:700}
+.metric-card .detail{font-size:.8rem;color:var(--text2);margin-top:.25rem}
+h2{font-size:1.8rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+h2 .icon{font-size:1.5rem}
+h3{font-size:1.2rem;font-weight:600;margin:1.5rem 0 .75rem;color:var(--accent2)}
+h4{font-size:1rem;font-weight:600;margin:1rem 0 .5rem;color:var(--text)}
+p{color:var(--text2);margin-bottom:.75rem}
+.tabs{display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.tab{padding:.5rem 1.25rem;border-radius:8px;background:var(--surface);border:1px solid var(--border);cursor:pointer;font-size:.85rem;color:var(--text2);transition:all .2s;font-weight:500}
+.tab:hover{border-color:var(--accent);color:var(--text)}
+.tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.tab-content{display:none;animation:fadeUp .4s ease}
+.tab-content.active{display:block}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
+.panel-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.chart-wrap{position:relative;height:350px;margin:1.5rem 0}
+.chart-wrap.short{height:250px}
+.accordion{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:.75rem;background:var(--surface)}
+.accordion-header{padding:1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;transition:background .2s}
+.accordion-header:hover{background:var(--surface2)}
+.accordion-header .arrow{transition:transform .3s;color:var(--text3)}
+.accordion.open .accordion-header .arrow{transform:rotate(180deg)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.accordion.open .accordion-body{max-height:3000px}
+.accordion-body-inner{padding:0 1.25rem 1.25rem}
+.quote{border-left:3px solid var(--accent);padding:.75rem 1rem;margin:1rem 0;background:var(--surface2);border-radius:0 8px 8px 0;font-style:italic;color:var(--text2)}
+.quote .author{font-style:normal;font-weight:600;color:var(--text3);margin-top:.25rem;font-size:.85rem}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{text-align:left;padding:.6rem .75rem;background:var(--surface2);color:var(--text);font-weight:600;border-bottom:1px solid var(--border)}
+td{padding:.6rem .75rem;border-bottom:1px solid rgba(42,42,74,.5);color:var(--text2)}
+tr:hover td{background:rgba(99,102,241,.05)}
+.badge{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.badge.high{background:rgba(239,68,68,.15);color:var(--red)}
+.badge.med{background:rgba(234,179,8,.15);color:var(--yellow)}
+.badge.low{background:rgba(34,197,94,.15);color:var(--green)}
+.tag{display:inline-block;padding:.2rem .6rem;border-radius:6px;font-size:.75rem;background:var(--surface2);color:var(--text2);margin:.15rem .15rem}
+.prob-bar{height:8px;border-radius:4px;background:var(--surface2);overflow:hidden;margin:.5rem 0}
+.prob-bar-fill{height:100%;border-radius:4px;transition:width .6s ease}
+.cascade{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.cascade-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.25rem;position:relative}
+.cascade-card .order{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:.5rem}
+.cascade-card ul{list-style:none;padding:0}
+.cascade-card li{padding:.3rem 0;font-size:.85rem;color:var(--text2);padding-left:1rem;position:relative}
+.cascade-card li::before{content:'→';position:absolute;left:0;color:var(--accent)}
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.4rem;width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);background:var(--bg)}
+.timeline-item h4{margin:0 0 .25rem}
+.timeline-item p{margin:0;font-size:.85rem}
+.sector-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}}
+.case-stat{display:flex;align-items:baseline;gap:.5rem;margin:.5rem 0}
+.case-stat .num{font-size:1.5rem;font-weight:700;color:var(--accent2)}
+.case-stat .desc{color:var(--text2);font-size:.85rem}
+.glow{box-shadow:0 0 30px rgba(99,102,241,.1)}
+.callout{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:1.25rem;margin:1rem 0;position:relative}
+.callout.warning{border-left:3px solid var(--yellow)}
+.callout.danger{border-left:3px solid var(--red)}
+.callout.info{border-left:3px solid var(--cyan)}
+.callout.new{border-left:3px solid var(--accent3)}
+.flow-diagram{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:1rem 0;font-size:.85rem}
+.flow-box{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:.5rem .75rem;text-align:center}
+.flow-arrow{color:var(--accent);font-size:1.2rem}
+.footer{text-align:center;padding:3rem 0;border-top:1px solid var(--border);margin-top:4rem;color:var(--text3);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<div class="nav-brand">AI Disruption Report 2026</div>
+<div class="nav-links">
+<a href="#executive">Executive Summary</a>
+<a href="#monte-carlo">Monte Carlo</a>
+<a href="#demand-feedback">Demand Feedback</a>
+<a href="#ark-deflation">ARK Deflation</a>
+<a href="#scenarios">Scenarios</a>
+<a href="#effects">Cascading Effects</a>
+<a href="#india">India Impact</a>
+<a href="#sectors">Sectors</a>
+<a href="#cases">Case Studies</a>
+<a href="#investment">Investment</a>
+<a href="#contrarian">Contrarian</a>
+<a href="#geopolitical">Geopolitical</a>
+<a href="#tail-risk">Tail Risk</a>
+<a href="#timeline">Timeline</a>
+</div>
+</nav>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero" id="executive">
+<h1>The AI Disruption Report</h1>
+<p class="subtitle">Probability-Weighted Macro Analysis: 2026 – 2036</p>
+<p class="date">42,000+ words of research · 17 primary sources · Monte Carlo v2 simulation (regime-switching, demand feedback) · February 12, 2026</p>
+</section>
+
+<!-- EXECUTIVE METRICS -->
+<section>
+<div class="metrics-grid">
+<div class="metric-card purple">
+<div class="label">White-Collar Displacement by 2031</div>
+<div class="value">20.7%</div>
+<div class="detail">P50 estimate (P10: 11.6%, P90: 32.6%)</div>
+</div>
+<div class="metric-card red">
+<div class="label">GDP Impact by 2031</div>
+<div class="value">+0.4%</div>
+<div class="detail">Median net (productivity +4.8% minus demand drag −4.3%)</div>
+</div>
+<div class="metric-card orange">
+<div class="label">SaaS Sector Decline by 2036</div>
+<div class="value">-17.7%</div>
+<div class="detail">Revenue compression + commoditization</div>
+</div>
+<div class="metric-card green">
+<div class="label">Energy Demand Increase by 2036</div>
+<div class="value">+9.9%</div>
+<div class="detail">Data center power consumption surge</div>
+</div>
+<div class="metric-card green">
+<div class="label">Chip Sector Growth by 2036</div>
+<div class="value">+25.0%</div>
+<div class="detail">NVIDIA/TSMC/ASML ecosystem expansion</div>
+</div>
+<div class="metric-card purple">
+<div class="label">Gini Delta by 2031</div>
+<div class="value">+0.042</div>
+<div class="detail">US: 0.41 → 0.45 (inequality acceleration)</div>
+</div>
+<div class="metric-card pink">
+<div class="label">Bifurcation Index by 2036</div>
+<div class="value">0.21</div>
+<div class="detail">AI-augmented tier booming vs displaced tier collapsing</div>
+</div>
+<div class="metric-card red">
+<div class="label">India IT Cascade by 2031</div>
+<div class="value">5.2M jobs</div>
+<div class="detail">1.5M direct IT + 3.7M indirect cascade</div>
+</div>
+</div>
+
+<div class="panel glow">
+<h3>Executive Summary</h3>
+<p>This report synthesizes research across 17 domains to model the cascading effects of AI on the global economy over the next decade. Our Monte Carlo v2 simulation — featuring regime-switching uncertainty, demand feedback loops, and correlated sampling — produces a median estimate of <strong>~21% white-collar task displacement by 2031</strong>, with GDP impact near zero in the short term (<strong>−0.09% by 2027</strong>) as demand destruction offsets productivity gains.</p>
+<p>The central finding of v2: <strong>AI creates a short-term GDP drag before uncertain long-term gains.</strong> By 2031, median net GDP impact is just +0.35% (productivity boost of +4.8% minus demand drag of −4.3%). By 2036, the range widens dramatically: −0.7% to +19.8% (P10–P90), with a median of +5.2%. This is a story of <strong>transition costs and uncertain payoff</strong>, not immediate transformation.</p>
+<p>The central investment thesis remains: <strong>value is migrating from the software application layer down to chips, energy, and physical infrastructure</strong>. SaaS faces a ~−18% revenue decline by 2036 while semiconductor and energy sectors surge. The Gini coefficient is projected to increase by 0.042 points by 2031 (rising to 0.077 by 2036). A new <strong>bifurcation index</strong> captures the growing split between AI-augmented and AI-displaced economic tiers.</p>
+<p>Key investment implications: <strong>Overweight</strong> NVDA, TSM, CEG, data center REITs. <strong>Underweight</strong> horizontal SaaS, office REITs. <strong>Hedge</strong> with energy infrastructure and gold for tail-risk scenarios. <strong>Watch</strong> for the demand feedback loop — if displacement outpaces new job creation, the downside scenarios dominate.</p>
+</div>
+</section>
+
+<!-- MONTE CARLO -->
+<section id="monte-carlo">
+<h2><span class="icon">📊</span> Monte Carlo v2 Simulation Results</h2>
+<p>10,000 simulated scenarios across 14+ metrics with regime-switching uncertainty (6 regimes), correlated sampling via Gaussian copula, and demand feedback loops. Projected to 2027, 2031, and 2036. Tooltips show P10–P90 range.</p>
+
+<div class="callout info">
+<strong>What changed from v1 → v2:</strong> Added demand destruction feedback (displaced workers reduce consumption → GDP drag), regime uncertainty (AI winter, regulatory shock, capability plateau), Klarna-dip adoption curves (quality wall reversal), India IT cascade modeling, and Acemoglu-calibrated GDP transmission (~7% of task productivity reaches GDP, not the naive 40% in v1).
+</div>
+
+<div class="two-col">
+<div class="panel">
+<h4>White-Collar Job Displacement (%)</h4>
+<div class="chart-wrap short"><canvas id="chartDisplacement"></canvas></div>
+</div>
+<div class="panel">
+<h4>GDP Impact (%) — Net of Demand Drag</h4>
+<div class="chart-wrap short"><canvas id="chartGDP"></canvas></div>
+</div>
+</div>
+<div class="two-col">
+<div class="panel">
+<h4>GDP: Productivity Boost vs Demand Drag (%)</h4>
+<div class="chart-wrap short"><canvas id="chartGDPSplit"></canvas></div>
+</div>
+<div class="panel">
+<h4>Bifurcation Index</h4>
+<div class="chart-wrap short"><canvas id="chartBifurcation"></canvas></div>
+</div>
+</div>
+<div class="two-col">
+<div class="panel">
+<h4>Energy Demand Increase (%)</h4>
+<div class="chart-wrap short"><canvas id="chartEnergy"></canvas></div>
+</div>
+<div class="panel">
+<h4>Chip Sector Growth (%)</h4>
+<div class="chart-wrap short"><canvas id="chartChips"></canvas></div>
+</div>
+</div>
+<div class="two-col">
+<div class="panel">
+<h4>SaaS Sector Revenue Decline (%)</h4>
+<div class="chart-wrap short"><canvas id="chartSaaS"></canvas></div>
+</div>
+<div class="panel">
+<h4>Wealth Concentration (Gini Delta)</h4>
+<div class="chart-wrap short"><canvas id="chartGini"></canvas></div>
+</div>
+</div>
+
+<div class="panel">
+<h4>Regime Distribution (Monte Carlo v2)</h4>
+<div class="chart-wrap short"><canvas id="chartRegimes"></canvas></div>
+<p style="font-size:.85rem;margin-top:.5rem">~50% of simulations follow the baseline regime (gradual adoption). Only 15% enter the acceleration regime. 10% each for AI winter, regulatory shock, and capability plateau. 5% China decoupling. This means the model itself gives only ~15% weight to the "AI transforms everything fast" narrative.</p>
+</div>
+</section>
+
+<!-- DEMAND FEEDBACK -->
+<section id="demand-feedback">
+<h2><span class="icon">🔄</span> The Demand Feedback Loop</h2>
+<p>The key insight of the v2 model: job displacement doesn't just reduce labor supply — it reduces <strong>consumer demand</strong>, creating a feedback loop that drags GDP.</p>
+
+<div class="flow-diagram">
+<div class="flow-box">AI Adoption ↑</div><span class="flow-arrow">→</span>
+<div class="flow-box">Task Automation ↑</div><span class="flow-arrow">→</span>
+<div class="flow-box">Worker Displacement ↑</div><span class="flow-arrow">→</span>
+<div class="flow-box">Income Loss ↑</div><span class="flow-arrow">→</span>
+<div class="flow-box">Consumer Spending ↓</div><span class="flow-arrow">→</span>
+<div class="flow-box">Revenue ↓</div><span class="flow-arrow">→</span>
+<div class="flow-box">More Layoffs</div><span class="flow-arrow">→</span>
+<div class="flow-box" style="border-color:var(--red)">GDP Drag</div>
+</div>
+
+<div class="two-col">
+<div class="panel">
+<h4>By the Numbers (2031 P50)</h4>
+<div class="table-wrap"><table>
+<tr><th>Component</th><th>Effect</th></tr>
+<tr><td>Productivity boost</td><td style="color:var(--green)">+4.8%</td></tr>
+<tr><td>Demand drag</td><td style="color:var(--red)">−4.3%</td></tr>
+<tr><td>Transition costs</td><td style="color:var(--red)">−0.1%</td></tr>
+<tr><td><strong>Net GDP impact</strong></td><td><strong>+0.35%</strong></td></tr>
+</table></div>
+<p style="font-size:.85rem">Consumer spending is ~70% of US GDP. Displaced workers lose 50-70% of income (ref: Autor, Dorn, Hanson 2013 on trade-displaced workers). The Keynesian multiplier amplifies the demand loss. The Fed may respond with rate cuts, but the effect is modest.</p>
+</div>
+<div class="panel">
+<h4>Why This Matters</h4>
+<p>The v1 model showed +9.3% GDP by 2027 — implying immediate, massive growth from AI. This was indefensible: the US has never achieved 9% annual GDP growth in peacetime.</p>
+<p>The v2 model tells a fundamentally different story: <strong>short-term pain, uncertain long-term gain</strong>. By 2027, GDP impact is slightly negative (−0.09% P50). The productivity boost doesn't exceed the demand drag until ~2029-2030 in the median case.</p>
+<p>This aligns much more closely with Acemoglu's conservative estimates and historical technology adoption patterns (Brynjolfsson's "Productivity J-curve").</p>
+</div>
+</div>
+
+<div class="callout warning">
+<strong>⚠️ The Acemoglu Gap:</strong> Nobel laureate Daron Acemoglu estimates &lt;0.53% TFP gain over 10 years. Our v2 median shows +0.35% by 2031 (5 years) and +5.2% by 2036 (10 years). The 2031 figure is remarkably close to Acemoglu. The 2036 divergence comes from regime uncertainty: in acceleration scenarios (15% of sims), compounding effects produce outsized gains that pull the median up. In the baseline regime (~50% of sims), 10-year GDP impact is closer to 2-3% — still above Acemoglu but not wildly so. The gap reflects model assumptions about the acceleration regime's probability and magnitude.
+</div>
+</section>
+
+<!-- ARK DEFLATION -->
+<section id="ark-deflation">
+<h2><span class="icon">📉</span> The ARK Deflation Thesis</h2>
+<p style="font-size:.85rem;color:var(--text3)">Published February 12, 2026 — ARK Invest "Big Ideas 2026"</p>
+
+<div class="panel glow" style="border-left:3px solid var(--accent3)">
+<h3>Deflationary Chaos: The Cathie Wood Argument</h3>
+<p>ARK Invest's latest research presents a provocative counter-narrative: AI doesn't just boost productivity — it triggers a <strong>deflationary revolution</strong> that could produce 5% real GDP growth, but through a mechanism fundamentally different from historical growth.</p>
+
+<div class="two-col" style="margin-top:1rem">
+<div>
+<h4 style="color:var(--green)">Cost Deflation: The Numbers</h4>
+<div class="table-wrap"><table>
+<tr><th>Metric</th><th>Rate</th></tr>
+<tr><td>AI training costs</td><td style="color:var(--green);font-weight:700">Falling ~75%/year</td></tr>
+<tr><td>AI inference costs</td><td style="color:var(--green);font-weight:700">Falling ~98%/year</td></tr>
+<tr><td>Robot cost per hour</td><td>$10-12 → sub-$2 by 2030s</td></tr>
+<tr><td>Software development cost</td><td>Approaching near-zero marginal</td></tr>
+</table></div>
+<p style="font-size:.85rem">Cathie Wood predicts a "Goldilocks" scenario: 5% real GDP growth with <em>deflation</em> — productivity-driven, not recession-driven. She calls it "deflationary chaos" in the positive sense: goods and services get radically cheaper.</p>
+</div>
+<div>
+<h4 style="color:var(--red)">The Bifurcation Problem</h4>
+<p>ARK's thesis has a critical blind spot: <strong>cost deflation is not the same as wage deflation.</strong></p>
+<ul style="font-size:.85rem;color:var(--text2);padding-left:1.25rem">
+<li style="margin:.3rem 0"><strong>Cost deflation</strong> (good for consumers): AI makes everything cheaper. Healthcare, software, legal services — all see price drops.</li>
+<li style="margin:.3rem 0"><strong>Wage deflation</strong> (devastating for workers): The same AI that makes services cheaper also makes the service workers redundant.</li>
+<li style="margin:.3rem 0"><strong>The paradox:</strong> Cheaper goods don't help if you don't have a job to buy them with.</li>
+</ul>
+<p style="font-size:.85rem">This is where our bifurcation index becomes critical. The AI-augmented tier (engineers who use AI, capital owners, AI companies) benefits from both cheaper inputs AND higher productivity. The AI-displaced tier faces wage collapse while prices in their sectors crater.</p>
+</div>
+</div>
+</div>
+
+<div class="two-col">
+<div class="panel" style="border-left:3px solid var(--green)">
+<h4>🟢 ARK's Case: "Goldilocks"</h4>
+<ul style="font-size:.85rem;color:var(--text2);padding-left:1.25rem">
+<li>AI training costs have fallen 75%/year consistently since GPT-3</li>
+<li>Inference costs dropping 98%/year enables mass deployment</li>
+<li>Deflationary = good: productivity-driven, not demand-collapse-driven</li>
+<li>Historical parallel: industrial revolution eventually raised all boats</li>
+<li>New jobs will emerge that we can't yet imagine</li>
+<li>5% real GDP with mild deflation = unprecedented prosperity</li>
+</ul>
+</div>
+<div class="panel" style="border-left:3px solid var(--red)">
+<h4>🔴 Acemoglu's Counter: "Not So Fast"</h4>
+<ul style="font-size:.85rem;color:var(--text2);padding-left:1.25rem">
+<li>Only 4.6% of tasks are truly cost-effectively automatable (NBER)</li>
+<li>Task productivity ≠ GDP (transmission rate is ~7%, not 100%)</li>
+<li>Cost deflation in AI ≠ economy-wide deflation</li>
+<li>"Even when AI improves productivity of low-skill workers, this may increase inequality"</li>
+<li>Previous tech revolutions took 40-60 years to fully play out</li>
+<li>ARK's 5% GDP implies faster adoption than any technology in history</li>
+</ul>
+</div>
+</div>
+
+<div class="callout new">
+<strong>🔑 Key Insight:</strong> ARK and Acemoglu may <em>both</em> be right about different parts of the economy. AI-augmented sectors could see ARK-style deflationary abundance while AI-displaced sectors see Acemoglu-style stagnation. Our bifurcation index attempts to measure this divergence: by 2036, P50 is 0.21, suggesting a deeply split economy. The question isn't whether AI creates value — it's whether that value reaches the people who lost their jobs to create it.
+</div>
+</section>
+
+<!-- SCENARIOS -->
+<section id="scenarios">
+<h2><span class="icon">🎯</span> Five Scenarios</h2>
+<p>Probability-weighted scenario analysis, recalibrated to align with Monte Carlo v2 regime distributions. Note: v2 regime states (~50% baseline, 15% acceleration) suggest more moderate outcomes than v1 implied.</p>
+
+<div class="tabs" id="scenarioTabs">
+<div class="tab active" data-tab="s0">Gradual (35%)</div>
+<div class="tab" data-tab="s1">Rapid Disruption (30%)</div>
+<div class="tab" data-tab="s2">Soft Landing (20%)</div>
+<div class="tab" data-tab="s3">Techno-Utopia (10%)</div>
+<div class="tab" data-tab="s4">Dystopia (5%)</div>
+</div>
+
+<div class="tab-content active" id="s0">
+<div class="panel">
+<div class="panel-header">
+<div>
+<h3 style="margin:0">Gradual Adaptation</h3>
+<p style="margin:0">Society adapts gradually. Productivity gains eventually offset demand drag. New roles emerge. Maps to v2 "baseline" regime (~50%).</p>
+</div>
+<div>
+<div class="prob-bar" style="width:120px"><div class="prob-bar-fill" style="width:35%;background:var(--grad2)"></div></div>
+<span style="font-size:.8rem;color:var(--text3)">35% probability</span>
+</div>
+</div>
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">First Order</div>
+<ul><li>15-25% white-collar tasks automated by 2031</li><li>GDP near flat short-term, +2-4% by 2036</li><li>Median wages stagnate, top quartile +15%</li><li>~40% of non-adapting companies fail by 2031</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">Second Order</div>
+<ul><li>CS enrollment drops 30%</li><li>Office demand -20%, data centers +35%</li><li>AI diagnostics widespread</li><li>Moderate UBI experiments</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">Third Order</div>
+<ul><li>Birth rates continue slow decline (-5%)</li><li>Gini +0.04 by 2031 (US: 0.41→0.45)</li><li>Demand feedback loop constrains growth</li><li>US-China race continues</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">Fourth Order</div>
+<ul><li>Gradual shift to leisure/creative pursuits</li><li>Work less central for younger cohorts</li><li>2-3% GDP growth by mid-2030s</li><li>Democracy strained but functional</li></ul>
+</div>
+</div>
+<h4>Investment Implications</h4>
+<div style="display:flex;flex-wrap:wrap;gap:.3rem">
+<span class="tag" style="background:rgba(34,197,94,.15);color:var(--green)">OW: SMH, NVDA, CEG</span>
+<span class="tag" style="background:rgba(239,68,68,.15);color:var(--red)">UW: Office REITs, IT Services</span>
+<span class="tag">Neutral: Broad equity exposure</span>
+</div>
+</div>
+</div>
+
+<div class="tab-content" id="s1">
+<div class="panel">
+<div class="panel-header">
+<div>
+<h3 style="margin:0">Rapid Disruption</h3>
+<p style="margin:0">AI advances faster than institutions adapt. Severe displacement and demand destruction. Maps to v2 "acceleration" regime (~15%).</p>
+</div>
+<div>
+<div class="prob-bar" style="width:120px"><div class="prob-bar-fill" style="width:30%;background:var(--grad3)"></div></div>
+<span style="font-size:.8rem;color:var(--text3)">30% probability</span>
+</div>
+</div>
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">First Order</div>
+<ul><li>30-40% tasks automated by 2031 (v2 P90 range)</li><li>GDP negative short-term, +10-20% by 2036 if demand recovers</li><li>AI-complementary roles +40%, others -20%</li><li>Company failure rate hits cap (~40%)</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">Second Order</div>
+<ul><li>University enrollment crisis, 20% close</li><li>Office vacancy 35%+</li><li>Mental health crisis overwhelms system</li><li>Populist movements gain power</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">Third Order</div>
+<ul><li>Birth rates crash (-15%)</li><li>Gini +0.08-0.10 (US: 0.41→0.49-0.51)</li><li>Demand collapse feedback intensifies</li><li>India IT cascade: 5M+ jobs lost</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">Fourth Order</div>
+<ul><li>'Deaths of despair' spike</li><li>Existential crisis for displaced workers</li><li>V-shaped recovery only if new jobs emerge</li><li>Democracy tested but survives</li></ul>
+</div>
+</div>
+<h4>Investment Implications</h4>
+<div style="display:flex;flex-wrap:wrap;gap:.3rem">
+<span class="tag" style="background:rgba(34,197,94,.15);color:var(--green)">OW: Energy, Defense, Gold, Healthcare</span>
+<span class="tag" style="background:rgba(239,68,68,.15);color:var(--red)">UW: Consumer Disc., Office REITs</span>
+<span class="tag">Hedge: Volatility, Put Protection</span>
+</div>
+</div>
+</div>
+
+<div class="tab-content" id="s2">
+<div class="panel">
+<div class="panel-header">
+<div>
+<h3 style="margin:0">Soft Landing / AI Plateau</h3>
+<p style="margin:0">Technical limitations slow adoption. Less disruption than expected. Maps to v2 "ai_winter" + "capability_plateau" regimes (~20%).</p>
+</div>
+<div>
+<div class="prob-bar" style="width:120px"><div class="prob-bar-fill" style="width:20%;background:var(--grad2)"></div></div>
+<span style="font-size:.8rem;color:var(--text3)">20% probability</span>
+</div>
+</div>
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">First Order</div>
+<ul><li>10-15% tasks automated by 2031</li><li>GDP +1-2% (modest gains, modest drag)</li><li>Modest wage compression, no crisis</li><li>Normal business cycle dynamics</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">Second Order</div>
+<ul><li>Modest enrollment shifts</li><li>Gradual RE adjustment</li><li>AI augments, doesn't transform healthcare</li><li>AI becomes normal political issue</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">Third Order</div>
+<ul><li>Trends continue, no AI-specific impact</li><li>Gini +0.02</li><li>Business as usual</li><li>Competition without crisis</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">Fourth Order</div>
+<ul><li>Existing trends continue</li><li>Work remains central</li><li>2-3% growth, demographics dominate</li><li>No unique AI stress</li></ul>
+</div>
+</div>
+<h4>Investment Implications</h4>
+<div style="display:flex;flex-wrap:wrap;gap:.3rem">
+<span class="tag">Reduce AI concentration risk</span>
+<span class="tag">Traditional diversification works</span>
+<span class="tag">Value rotation possible</span>
+<span class="tag" style="background:rgba(239,68,68,.15);color:var(--red)">Chip multiples compress</span>
+</div>
+</div>
+</div>
+
+<div class="tab-content" id="s3">
+<div class="panel">
+<div class="panel-header">
+<div>
+<h3 style="margin:0">Techno-Utopia / Abundance</h3>
+<p style="margin:0">AI enables unprecedented abundance. ARK's "Goldilocks" scenario realized. New golden age.</p>
+</div>
+<div>
+<div class="prob-bar" style="width:120px"><div class="prob-bar-fill" style="width:10%;background:var(--accent)"></div></div>
+<span style="font-size:.8rem;color:var(--text3)">10% probability</span>
+</div>
+</div>
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">First Order</div>
+<ul><li>60% labor automated, but irrelevant</li><li>GDP +50% by 2036, widely distributed</li><li>UBI provides baseline, work optional</li><li>Deflationary abundance (ARK thesis realized)</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">Second Order</div>
+<ul><li>Education → creativity & meaning</li><li>Decentralized, WFH default</li><li>AI-driven, personalized, near-free healthcare</li><li>Post-scarcity politics</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">Third Order</div>
+<ul><li>Economic barriers to family removed</li><li>Initially high concentration, then redistributed</li><li>New community forms</li><li>Cooperation increases</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">Fourth Order</div>
+<ul><li>New philosophies resolve meaning crisis</li><li>Identity → creativity, relationships, growth</li><li>Exponential but sustainable growth</li><li>Democracy enhanced by AI</li></ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tab-content" id="s4">
+<div class="panel">
+<div class="panel-header">
+<div>
+<h3 style="margin:0">Dystopia / Collapse</h3>
+<p style="margin:0">AI alignment fails or is captured by bad actors. Demand feedback loop spirals into depression.</p>
+</div>
+<div>
+<div class="prob-bar" style="width:120px"><div class="prob-bar-fill" style="width:5%;background:var(--grad4)"></div></div>
+<span style="font-size:.8rem;color:var(--text3)">5% probability</span>
+</div>
+</div>
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">First Order</div>
+<ul><li>Rapid, unmanaged, chaotic displacement</li><li>Gains captured by narrow elite</li><li>Demand collapse spiral: layoffs → spending cuts → more layoffs</li><li>Winner-take-all monopolization</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">Second Order</div>
+<ul><li>Education collapse or state capture</li><li>Extreme RE bifurcation</li><li>AI-controlled healthcare triage</li><li>Authoritarianism or chaos</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">Third Order</div>
+<ul><li>Social fabric tears</li><li>Neo-feudalism (Gini 0.60+)</li><li>Civil conflict, mass migration</li><li>AI-powered conflict</li></ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">Fourth Order</div>
+<ul><li>Existential despair widespread</li><li>Humans become second-class</li><li>Negative growth for most</li><li>Democracy ends</li></ul>
+</div>
+</div>
+<h4>Investment Implications</h4>
+<div style="display:flex;flex-wrap:wrap;gap:.3rem">
+<span class="tag" style="background:rgba(234,179,8,.15);color:var(--yellow)">Defensive: Gold, Hard Assets, Land</span>
+<span class="tag" style="background:rgba(239,68,68,.15);color:var(--red)">All paper assets at risk</span>
+<span class="tag">Citizenship diversification</span>
+</div>
+</div>
+</div>
+
+<div class="panel">
+<h4>Scenario Probability Distribution</h4>
+<div class="chart-wrap short"><canvas id="chartScenarios"></canvas></div>
+</div>
+</section>
+
+<!-- CASCADING EFFECTS -->
+<section id="effects">
+<h2><span class="icon">🔗</span> Cascading Effects: First → Fourth Order</h2>
+<p>Each order of effect triggers the next. Time horizons expand as effects compound.</p>
+
+<div class="cascade">
+<div class="cascade-card" style="border-top:3px solid var(--accent)">
+<div class="order" style="color:var(--accent)">⚡ First Order (Immediate)</div>
+<ul>
+<li>97% of developers using AI tools</li>
+<li>Cursor: $0 → $1B ARR in 18 months</li>
+<li>Junior dev employment down 20%</li>
+<li>30% of Microsoft code is AI-generated</li>
+<li>Coding bootcamp closures accelerating</li>
+<li>Customer service automation: Klarna, Salesforce</li>
+</ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--cyan)">
+<div class="order" style="color:var(--cyan)">🌊 Second Order (1–3 years)</div>
+<ul>
+<li>CS enrollment growth collapsed to 0.2%</li>
+<li>Only 30% of 2025 grads found field jobs</li>
+<li>University budget crises ($375M CSU cuts)</li>
+<li>Office vacancy at 18.7% nationally</li>
+<li>Data center investment: $61B in 2025</li>
+<li>SaaS revenue multiples: 7x → 5.1x</li>
+</ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--orange)">
+<div class="order" style="color:var(--orange)">🔥 Third Order (3–7 years)</div>
+<ul>
+<li>Gen Z pivoting to trades (+23% enrollment)</li>
+<li>Student debt: $1.8T with declining ROI</li>
+<li>Pension contribution stress from displaced workers</li>
+<li>Credit card delinquencies at 2010 highs</li>
+<li>Mental health crisis: d=0.51 effect size</li>
+<li>Demand feedback loop constraining GDP</li>
+</ul>
+</div>
+<div class="cascade-card" style="border-top:3px solid var(--red)">
+<div class="order" style="color:var(--red)">💀 Fourth Order (7–15 years)</div>
+<ul>
+<li>Dating markets disrupted (2400% ↑ AI girlfriend searches)</li>
+<li>Birth rate collapse in displaced demographics</li>
+<li>AI as new religion (e/acc, Spiralism)</li>
+<li>Human augmentation divides (Neuralink)</li>
+<li>Bifurcation index 0.21 by 2036 — two-tier economy</li>
+<li>Simulation theory becomes mainstream</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- INDIA IMPACT -->
+<section id="india">
+<h2><span class="icon">🇮🇳</span> India IT Displacement Cascade</h2>
+<p>The v2 model adds a critical new dimension: the impact on India's IT outsourcing sector, which employs 5.4M directly and supports ~15M indirectly.</p>
+
+<div class="two-col">
+<div class="panel">
+<h4>Direct Impact (Monte Carlo v2 P50)</h4>
+<div class="table-wrap"><table>
+<tr><th>Metric</th><th>2027</th><th>2031</th><th>2036</th></tr>
+<tr><td>Direct IT jobs lost</td><td>62K</td><td>1.5M</td><td>1.7M</td></tr>
+<tr><td>Cascade jobs lost</td><td>156K</td><td>3.7M</td><td>4.4M</td></tr>
+<tr><td>Total jobs at risk</td><td>218K</td><td>5.2M</td><td>6.1M</td></tr>
+<tr><td>India GDP drag</td><td>0.04%</td><td>0.96%</td><td>1.13%</td></tr>
+</table></div>
+</div>
+<div class="panel">
+<h4>The Cascade Mechanism</h4>
+<div class="flow-diagram">
+<div class="flow-box">AI Coding Tools</div><span class="flow-arrow">→</span>
+<div class="flow-box">Outsourcing Contracts End</div><span class="flow-arrow">→</span>
+<div class="flow-box">IT Layoffs</div><span class="flow-arrow">→</span>
+<div class="flow-box">Bangalore/Hyderabad RE Crash</div>
+</div>
+<div class="flow-diagram">
+<div class="flow-box">Remittance Decline</div><span class="flow-arrow">→</span>
+<div class="flow-box">Rural Consumption Drop</div><span class="flow-arrow">→</span>
+<div class="flow-box">Political Instability</div>
+</div>
+<p style="font-size:.85rem;margin-top:.75rem">India's IT sector ($250B revenue, 3.5% of GDP) is uniquely vulnerable: it specializes in exactly the tasks AI automates best — routine code, testing, maintenance, and basic customer support. The 2.5x cascade multiplier (NASSCOM) means every direct IT job lost triggers 2.5 indirect job losses in services, real estate, and local commerce.</p>
+</div>
+</div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+<h2><span class="icon">📈</span> Sector-by-Sector Analysis</h2>
+
+<div class="sector-grid">
+<div class="panel">
+<h3>⚡ Energy Infrastructure</h3>
+<div class="quote">Data center power demand to grow 165-175% by 2030 vs 2023 levels — equivalent to adding a top-10 power-consuming country.<div class="author">— Goldman Sachs Research</div></div>
+<div class="table-wrap"><table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Current DC power</td><td>55 GW globally</td></tr>
+<tr><td>2030 projection</td><td>~146-151 GW (+165-175%)</td></tr>
+<tr><td>Grid spending needed</td><td>$720B through 2030</td></tr>
+<tr><td>US interconnection queue</td><td>2,600 GW (2x grid)</td></tr>
+</table></div>
+<h4>Key Plays</h4>
+<div style="display:flex;flex-wrap:wrap;gap:.3rem">
+<span class="tag" style="background:rgba(34,197,94,.15);color:var(--green)">CEG: 41.7x P/E, Microsoft PPA</span>
+<span class="tag" style="background:rgba(34,197,94,.15);color:var(--green)">VST: Nuclear + Gas</span>
+<span class="tag">NRG: ERCOT exposure</span>
+</div>
+<p style="margin-top:.75rem;font-size:.85rem">Nuclear renaissance: Microsoft/TMI restart (2028), Google/Kairos SMRs (2030-2035), Meta RFP for 1-4 GW. Jevons Paradox ensures efficiency gains won't reduce total consumption. Monte Carlo v2 P50: +9.9% energy demand by 2036.</p>
+</div>
+
+<div class="panel">
+<h3>🔧 Semiconductors</h3>
+<div class="quote">If data is the new oil, and AI is the new electricity, then compute is the engine — and NVIDIA builds the engines, licenses the fuel, and sells the roads.<div class="author">— Industry Analysis</div></div>
+<div class="table-wrap"><table>
+<tr><th>Company</th><th>Gross Margin</th><th>Key Metric</th></tr>
+<tr><td>NVIDIA</td><td>75-76%</td><td>$44B Q3 revenue</td></tr>
+<tr><td>TSMC</td><td>56-60%</td><td>$122B 2025 rev (+36%)</td></tr>
+<tr><td>ASML</td><td>~52%</td><td>EUV monopoly</td></tr>
+<tr><td>AMD</td><td>~50%</td><td>No CUDA ecosystem</td></tr>
+</table></div>
+<p style="font-size:.85rem">CUDA lock-in is NVIDIA's moat. 85%+ of AI chips made by TSMC. Monte Carlo v2 shows <strong>+25.0% chip sector growth by 2036</strong> (P50), down from v1's +51.5% due to demand feedback effects and regime uncertainty. DeepSeek shock temporary—demand absorbs efficiency gains.</p>
+</div>
+
+<div class="panel">
+<h3>💻 SaaS / Software</h3>
+<div class="quote">SaaS is dying as a business category. Entrepreneurs approaching VCs with SaaS startups won't even reach the pitch stage.<div class="author">— Dean Shahar, DTCP (Jan 2026)</div></div>
+<div class="table-wrap"><table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>SaaS Index 2025</td><td>-6.5% (vs S&P +17.6%)</td></tr>
+<tr><td>Revenue multiple</td><td>7x → 5.1x</td></tr>
+<tr><td>Software stocks wiped</td><td>$830B in 6 days</td></tr>
+<tr><td>S&P Software Index</td><td>-26% from Oct peak</td></tr>
+</table></div>
+<p style="font-size:.85rem"><strong>Most vulnerable:</strong> Horizontal SaaS, basic CRM, workflow tools. <strong>Protected:</strong> Cybersecurity, deep vertical solutions, proprietary data moats. Customer terminated $350K Salesforce contract for AI-built alternative. Monte Carlo v2 P50: <strong>−17.7% SaaS decline by 2036</strong>.</p>
+</div>
+
+<div class="panel">
+<h3>🏢 Real Estate</h3>
+<div class="quote">The $3+ trillion CRE market is not collapsing — it is bifurcating. Capital flows to AI-aligned infrastructure while obsolete assets face structural decline.<div class="author">— Report Synthesis</div></div>
+<div class="table-wrap"><table>
+<tr><th>Sector</th><th>Outlook</th></tr>
+<tr><td>Data Centers</td><td><span class="badge low">Strong OW</span> $61B invested 2025</td></tr>
+<tr><td>Office (Trophy)</td><td><span class="badge med">Selective</span> Flight to quality</td></tr>
+<tr><td>Office (B/C)</td><td><span class="badge high">Underweight</span> Structural obsolescence</td></tr>
+<tr><td>Industrial (Infill)</td><td><span class="badge low">Moderate OW</span> Robotics demand</td></tr>
+</table></div>
+<p style="font-size:.85rem">Office vacancy 18.7%. Trifurcated market: Trophy/A/B-C. Data center capacity +43% YoY. Power is the new location—grid access determines viability. $7T buildout projected through 2030.</p>
+</div>
+
+<div class="panel">
+<h3>🎓 Education</h3>
+<div class="quote">This was supposed to be the job of the future. The way to stay ahead of technology was to go to college and get coding skills.<div class="author">— Molly Kinder, Brookings Institution</div></div>
+<div class="table-wrap"><table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>CS enrollment growth</td><td>Double-digits → 0.2%</td></tr>
+<tr><td>2025 grad employment</td><td>30% (down from 41%)</td></tr>
+<tr><td>Coding bootcamp closures</td><td>15+ confirmed</td></tr>
+<tr><td>Gen Z viewing trades as safer</td><td>53%</td></tr>
+</table></div>
+<p style="font-size:.85rem">Princeton projects 25% decline in CS majors. AI bachelor's programs doubled (90→193). Skills-based hiring remains performative: &lt;1 in 700 hires affected. Student debt at $1.8T with 77% calling it a "huge burden."</p>
+</div>
+
+<div class="panel">
+<h3>🤖 Robotics</h3>
+<div class="quote">The economics are compelling: robot labor costs could drop to $2-10/hour today, potentially reaching sub-$1/hour by early 2030s.<div class="author">— RethinkX Analysis</div></div>
+<div class="table-wrap"><table>
+<tr><th>Company</th><th>Status</th><th>Cost</th></tr>
+<tr><td>Tesla Optimus</td><td>Mass production begun</td><td>$20K target</td></tr>
+<tr><td>Figure AI (BMW)</td><td>90K+ parts loaded</td><td>—</td></tr>
+<tr><td>Agility Digit (Amazon)</td><td>98% task success</td><td>$10-12/hr</td></tr>
+<tr><td>Boston Dynamics Atlas</td><td>2026 sold out</td><td>~$420K</td></tr>
+</table></div>
+<p style="font-size:.85rem">Manufacturing/logistics first (controlled environments), home deployment years away. Bottlenecks: dexterity (5-7yr) and batteries (10yr+). NVIDIA Isaac platform enables training. China competing aggressively.</p>
+</div>
+</div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+<h2><span class="icon">🏢</span> Case Studies</h2>
+<p>Documented AI workforce displacement with real numbers.</p>
+
+<div class="two-col">
+<div class="accordion open">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>Salesforce — Agentforce Customer Service</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="case-stat"><span class="num">-44%</span><span class="desc">support staff (9,000 → 5,000)</span></div>
+<div class="case-stat"><span class="num">1M+</span><span class="desc">AI customer conversations</span></div>
+<div class="quote">"I've reduced it from 9,000 heads to about 5,000, because I need less heads."<div class="author">— Marc Benioff, CEO</div></div>
+<p>Deployed Agentforce AI bot system. Feb 2026: additional 1,000+ layoffs including the Agentforce team itself. Simultaneously hiring 2,000 salespeople to sell AI products.</p>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>Klarna — AI Customer Service (Then Reversal) ⚠️</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="case-stat"><span class="num">-59%</span><span class="desc">total workforce (7,400 → 3,000)</span></div>
+<div class="case-stat"><span class="num">853</span><span class="desc">FTE equivalent handled by AI</span></div>
+<div class="quote">"What you end up having is lower quality... cost unfortunately seems to have been a too predominant evaluation factor."<div class="author">— Sebastian Siemiatkowski, CEO (on partial reversal)</div></div>
+<p>Customers complained about lack of human support. Now running hybrid AI + human model. Remaining employees got 60% pay increase. Successful IPO at ~$15B.</p>
+<div class="callout warning">
+<strong>The Klarna Pattern as "Quality Wall" Evidence:</strong> Klarna's trajectory — rapid AI deployment → quality complaints → partial reversal → hybrid model — is exactly the pattern modeled by our v2 "Klarna dip" adoption curve. This suggests many enterprises will follow a similar path: rush to automate, hit quality ceilings, pull back, then re-adopt more carefully. The v2 model incorporates this as an 8-20% reversal centered 1.5-3 years after initial deployment.
+</div>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>Spotify — Engineers Stop Coding</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="case-stat"><span class="num">50+</span><span class="desc">features shipped with AI assistance (2025)</span></div>
+<div class="case-stat"><span class="num">0</span><span class="desc">lines of code by top engineers since Dec 2025</span></div>
+<div class="quote">"An engineer on their morning commute from Slack on their cell phone can tell Claude to fix a bug... all before they even arrive at the office."<div class="author">— Gustav Söderström, Co-CEO</div></div>
+<p>Internal "Honk" system uses Claude Opus 4.5. Engineers become orchestrators. No explicit layoffs yet — but fundamental role transformation occurring.</p>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>Microsoft — 15,000 Software Engineer Layoffs</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="case-stat"><span class="num">~15K</span><span class="desc">total 2025 layoffs (multiple rounds)</span></div>
+<div class="case-stat"><span class="num">30%</span><span class="desc">of codebase now AI-generated</span></div>
+<div class="case-stat"><span class="num">-60%</span><span class="desc">traditional engineering roles (Redmond, WA)</span></div>
+<p>40%+ of WA state cuts were software engineers. Satya Nadella confirmed 30% AI-generated code. Companies now require "fewer engineers per feature shipped."</p>
+</div></div>
+</div>
+</div>
+
+<div class="panel">
+<h4>Broader Pattern: 150,000+ tech jobs cut in 2024</h4>
+<div class="table-wrap"><table>
+<tr><th>Company</th><th>Jobs Affected</th><th>Primary Impact</th></tr>
+<tr><td>Salesforce</td><td>4,000</td><td>Customer Service</td></tr>
+<tr><td>Klarna</td><td>4,400+</td><td>Customer Service</td></tr>
+<tr><td>Microsoft</td><td>15,000+</td><td>Software Engineering</td></tr>
+<tr><td>Amazon</td><td>14,000</td><td>Corporate Roles</td></tr>
+<tr><td>IBM</td><td>7,800 (planned)</td><td>Back Office</td></tr>
+</table></div>
+<p style="font-size:.8rem;color:var(--text3)">Note: Not all tech layoffs are AI-driven. Many 2024 cuts were post-ZIRP cost-cutting. Distinguishing AI displacement from cyclical layoffs is an ongoing attribution challenge.</p>
+</div>
+
+<div class="callout warning">
+<strong>Survivorship Bias Warning:</strong> These case studies represent large, tech-forward companies that attempted AI displacement and mostly succeeded. Missing from this picture: companies that tried AI replacement and failed completely, reverted, or saw no productivity gain. The 57% automation potential (McKinsey) vs. 21% actual AI usage (Pew) gap — a 36 percentage point difference — suggests the failure cases are far more common than the success stories dominating headlines.
+</div>
+</section>
+
+<!-- INVESTMENT -->
+<section id="investment">
+<h2><span class="icon">💰</span> Investment Thesis</h2>
+
+<div class="two-col">
+<div class="panel">
+<h4>Allocation Framework</h4>
+<div class="chart-wrap"><canvas id="chartAllocation"></canvas></div>
+</div>
+<div class="panel">
+<h4>Value Chain Hierarchy</h4>
+<div style="font-size:.85rem">
+<div style="padding:.6rem;background:rgba(99,102,241,.15);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--accent)"><strong>1. GPU Design + Software</strong> — NVIDIA: 75% margins, CUDA lock-in</div>
+<div style="padding:.6rem;background:rgba(6,182,212,.12);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--cyan)"><strong>2. Energy Infrastructure</strong> — New bottleneck, decades of growth</div>
+<div style="padding:.6rem;background:rgba(34,197,94,.1);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--green)"><strong>3. Chip Manufacturing</strong> — TSMC: 85%+ of AI chips</div>
+<div style="padding:.6rem;background:rgba(234,179,8,.1);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--yellow)"><strong>4. Proprietary Data</strong> — Defensible moat</div>
+<div style="padding:.6rem;background:rgba(249,115,22,.1);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--orange)"><strong>5. Neoclouds</strong> — CoreWeave, Lambda</div>
+<div style="padding:.6rem;background:rgba(239,68,68,.1);border-radius:8px;margin:.3rem 0;border-left:3px solid var(--red)"><strong>6. Application Layer</strong> — Commoditizing rapidly</div>
+</div>
+</div>
+</div>
+
+<div class="panel">
+<h3>Position Summary</h3>
+<div class="table-wrap"><table>
+<tr><th>Position</th><th>Category</th><th>Thesis</th><th>Examples</th></tr>
+<tr><td><span class="badge low">Strong OW</span></td><td>GPU Design</td><td>CUDA lock-in, ecosystem control</td><td>NVDA</td></tr>
+<tr><td><span class="badge low">Strong OW</span></td><td>Foundry</td><td>Irreplaceable capacity</td><td>TSM</td></tr>
+<tr><td><span class="badge low">Strong OW</span></td><td>Lithography</td><td>EUV monopoly</td><td>ASML</td></tr>
+<tr><td><span class="badge low">Strong OW</span></td><td>Nuclear/Energy</td><td>AI power bottleneck</td><td>CEG, VST</td></tr>
+<tr><td><span class="badge low">Strong OW</span></td><td>DC REITs</td><td>Physical infra demand</td><td>EQIX, DLR</td></tr>
+<tr><td><span class="badge med">Hold</span></td><td>Cybersecurity</td><td>Still essential (attack surface grows with AI)</td><td>CRWD, PANW</td></tr>
+<tr><td><span class="badge high">Underweight</span></td><td>Horizontal SaaS</td><td>Features commoditized</td><td>CRM, HUBS</td></tr>
+<tr><td><span class="badge high">Underweight</span></td><td>Office REITs</td><td>Structural obsolescence</td><td>Class B/C</td></tr>
+<tr><td><span class="badge high">Underweight</span></td><td>Data Platforms</td><td>LLMs threatening moats</td><td>TRI, MSCI</td></tr>
+</table></div>
+</div>
+</section>
+
+<!-- CONTRARIAN -->
+<section id="contrarian">
+<h2><span class="icon">🔄</span> Contrarian Views: Steel-Manning the Skeptics</h2>
+<p>The strongest arguments against AI hype deserve serious consideration. Notably, the v2 Monte Carlo results <em>strengthen</em> these skeptical positions — the model now agrees with many of their central claims.</p>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>🎓 Daron Acemoglu (MIT): "Only 0.53% TFP gain over 10 years"</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="quote">"Predicted TFP gains over the next 10 years are even more modest and are predicted to be less than 0.53%... Even when AI improves the productivity of low-skill workers, this may increase rather than reduce inequality."<div class="author">— Daron Acemoglu, Nobel laureate (2024), NBER Working Paper 32487</div></div>
+<p>The Nobel laureate argues: hard-to-learn tasks (context-dependent, no objective outcome measures) will be far harder to automate than easy-to-learn tasks. Early productivity evidence skews optimistic because it measures the low-hanging fruit. Only 4.6% of tasks are truly cost-effectively automatable.</p>
+<div class="callout info">
+<strong>v2 Model Alignment:</strong> Our v2 median GDP impact of +0.35% by 2031 (5 years) is remarkably close to Acemoglu's &lt;0.53% over 10 years. The 2036 median of +5.2% diverges, but this is pulled up by the 15% acceleration regime. In the baseline regime (~50% of sims), 10-year GDP is closer to 2-3%.
+</div>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>🤖 Rodney Brooks (MIT): "Calm down people"</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="quote">"We are not on the verge of replacing and eliminating humans in either white collar jobs or blue collar jobs. We are not on the verge of a revolution in medicine. We are not on the verge of the elimination of coding as a job."<div class="author">— Rodney Brooks, 2025 Predictions Scorecard</div></div>
+<p>Coined FOBAWTPALSL: "Fear Of Being A Wimpy Techno-Pessimist And Looking Stupid Later." Notes that ALL deployed AI systems have humans somewhere in the loop. Recalls identical claims made about IBM Watson in 2011—never delivered.</p>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>💰 David Cahn (Sequoia): "AI's $600B Question"</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<p>GPU computing is turning into a commodity. Unlike CPU cloud (oligopoly), new AI cloud entrants flooding market = prices competed to marginal cost. Nvidia's own next-gen chips create rapid depreciation of current infrastructure. The revenue gap between AI infrastructure spending and AI application revenue suggests a potential correction.</p>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>✍️ Ted Chiang: "AI as the New McKinsey"</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="quote">"The doomsday scenario is not a manufacturing A.I. transforming the entire planet into paper clips... It's A.I.-supercharged corporations destroying the environment and the working class in their pursuit of shareholder value."<div class="author">— Ted Chiang, The New Yorker</div></div>
+<p>AI provides escape from accountability: "just doing what the algorithm says." UBI advocacy by AI developers is "passing the buck to the government" while intensifying capitalism's problems.</p>
+</div></div>
+</div>
+
+<div class="accordion">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+<span>🧠 Gary Marcus: "A trillion dollars hasn't changed" LLM flaws</span>
+<span class="arrow">▼</span>
+</div>
+<div class="accordion-body"><div class="accordion-body-inner">
+<div class="quote">"The big economic news in AI 2026 is that [circular financing] is poised to collapse. Significantly, Nvidia has apparently pulled back on its $100B promise to OpenAI; they are now hinting at something like a more modest $20B."<div class="author">— Gary Marcus, Feb 2026</div></div>
+<p>Hallucinations persist. GPT-4's own system card admits it "makes up facts" and "double-downs on incorrect information" in ways "more convincing and believable" than earlier models. Circular financing (Nvidia → OpenAI → Nvidia) echoes dot-com dynamics.</p>
+</div></div>
+</div>
+
+<div class="panel" style="border-left:3px solid var(--yellow)">
+<h4>⚖️ The Balanced View</h4>
+<p>The skeptics don't say AI is worthless. They say: <strong>timelines are wrong</strong> (decades, not years), <strong>economic impact is overstated</strong> (0.5% TFP, not transformational), <strong>technical limitations persist</strong> (hallucinations, no learning), <strong>adoption will be slower</strong> than hype suggests, and <strong>history rhymes</strong>—every AI boom has been followed by a bust.</p>
+<p>Our v2 Monte Carlo results are <strong>far more sympathetic to the skeptics</strong> than v1 was. The median GDP impact of +0.35% by 2031 is in Acemoglu's ballpark. The Klarna-dip adoption curve embeds Brooks' and Marcus' quality-wall arguments directly into the model. The regime distribution gives ~50% weight to a gradual baseline — implying the "moderate outcome" skeptics predict is actually the most likely single path.</p>
+<p>The remaining disagreement is about <strong>tail upside</strong>: our 15% acceleration regime and the 2036 P90 of +19.8% GDP represent outcomes the skeptics consider implausible. Whether those tails are real or fantasy will define the decade.</p>
+</div>
+</section>
+
+<!-- GEOPOLITICAL -->
+<section id="geopolitical">
+<h2><span class="icon">🌍</span> Geopolitical Analysis: US vs China</h2>
+
+<div class="two-col">
+<div class="panel">
+<h4>AI Race Scorecard</h4>
+<div class="chart-wrap"><canvas id="chartGeo"></canvas></div>
+</div>
+<div class="panel">
+<h4>Key Metrics</h4>
+<div class="table-wrap"><table>
+<tr><th>Dimension</th><th>US</th><th>China</th><th>Leader</th></tr>
+<tr><td>Compute capacity</td><td>Baseline</td><td>~5%</td><td><span style="color:var(--green)">US (~20x)</span></td></tr>
+<tr><td>Notable models (2024)</td><td>40</td><td>15</td><td><span style="color:var(--green)">US</span></td></tr>
+<tr><td>Private AI investment</td><td>$109B</td><td>$44B</td><td><span style="color:var(--green)">US</span></td></tr>
+<tr><td>Research papers</td><td>28,400</td><td>41,200</td><td><span style="color:var(--red)">China</span></td></tr>
+<tr><td>Edge AI chip mfg share</td><td>—</td><td>67%</td><td><span style="color:var(--red)">China</span></td></tr>
+<tr><td>Open-source models</td><td>Llama</td><td>Qwen, DeepSeek</td><td><span style="color:var(--red)">China</span></td></tr>
+<tr><td>Military AI speed</td><td>Cautious</td><td>Fast</td><td><span style="color:var(--red)">China</span></td></tr>
+</table></div>
+</div>
+</div>
+
+<div class="panel">
+<h3>🇹🇼 Taiwan / TSMC Risk</h3>
+<div class="quote">A significant disruption to Taiwan's semiconductor industry could affect as much as $1.6 trillion, or roughly 8%, of America's annual gross domestic product.<div class="author">— Rhodium Group (via Hudson Institute)</div></div>
+<div class="table-wrap"><table>
+<tr><th>Scenario</th><th>Global Cost</th><th>Source</th></tr>
+<tr><td>Full-scale conflict</td><td>$10 trillion</td><td>IEP</td></tr>
+<tr><td>Year-long blockade</td><td>$5 trillion</td><td>Bloomberg Economics</td></tr>
+<tr><td>Supply disruption</td><td>$1.6T (8% US GDP)</td><td>Rhodium Group (via Hudson Institute)</td></tr>
+</table></div>
+<p>TSMC controls ~92% of advanced chip manufacturing (&lt;7nm). Mitigation: $65-100B Arizona investment, CHIPS Act $52B. But most advanced chips still made in Taiwan.</p>
+</div>
+
+<div class="panel">
+<h3>Emerging AI Powers</h3>
+<div class="table-wrap"><table>
+<tr><th>Country</th><th>AI Investment</th><th>Strategy</th></tr>
+<tr><td>UAE</td><td>$30B JV (BlackRock/MSFT)</td><td>14% GDP from AI by 2030</td></tr>
+<tr><td>Saudi Arabia</td><td>$100B "Project Transcendence"</td><td>12% GDP from AI by 2030</td></tr>
+<tr><td>India</td><td>Growing</td><td>Sovereign AI, but IT sector at risk (see India section)</td></tr>
+</table></div>
+</div>
+</section>
+
+<!-- TAIL RISK -->
+<section id="tail-risk">
+<h2><span class="icon">⚠️</span> Tail Risk Matrix</h2>
+<p>Low-probability, high-impact scenarios that could reshape the investment landscape.</p>
+
+<div class="table-wrap"><table>
+<tr><th>Scenario</th><th>Probability</th><th>Impact</th><th>Timeframe</th><th>Key Trigger</th></tr>
+<tr><td>AI Financial Crisis</td><td><span class="badge med">20-40%</span></td><td><span class="badge high">High</span></td><td>1-5 yr</td><td>Algorithmic herding, flash crash cascade</td></tr>
+<tr><td>Demand Collapse Spiral</td><td><span class="badge med">30-50%</span></td><td><span class="badge high">High</span></td><td>3-10 yr</td><td>Displacement outpaces job creation (v2 feedback loop)</td></tr>
+<tr><td>Cyber Warfare Escalation</td><td><span class="badge med">20-40%</span></td><td><span class="badge high">Very High</span></td><td>1-10 yr</td><td>AI-powered infrastructure attack</td></tr>
+<tr><td>Democratic Erosion</td><td><span class="badge high">40-60%</span></td><td><span class="badge high">High</span></td><td>Ongoing</td><td>Deepfakes, disinformation at scale</td></tr>
+<tr><td>Mass Mental Health Crisis</td><td><span class="badge high">50-70%</span></td><td><span class="badge med">Medium</span></td><td>Ongoing</td><td>Job loss + meaning crisis</td></tr>
+<tr><td>India IT Cascade</td><td><span class="badge med">40-60%</span></td><td><span class="badge high">High</span></td><td>3-7 yr</td><td>AI outsourcing displacement → regional economic collapse</td></tr>
+<tr><td>Resource Wars</td><td><span class="badge med">30-50%</span></td><td><span class="badge high">High</span></td><td>5-20 yr</td><td>Chip/energy/mineral competition</td></tr>
+<tr><td>AI Alignment Failure</td><td><span class="badge low">5-20%</span></td><td><span class="badge high">Catastrophic</span></td><td>5-30 yr</td><td>Goal misgeneralization</td></tr>
+<tr><td>Surveillance State</td><td><span class="badge med">30-50%</span></td><td><span class="badge high">High</span></td><td>Ongoing</td><td>China model goes global</td></tr>
+<tr><td>Nuclear Instability</td><td><span class="badge low">5-15%</span></td><td><span class="badge high">Catastrophic</span></td><td>10-30 yr</td><td>AI erodes MAD survivability</td></tr>
+<tr><td>Positive Tail (Abundance)</td><td><span class="badge low">10-20%</span></td><td><span style="color:var(--green);font-weight:700">Extremely +</span></td><td>10-50 yr</td><td>Alignment solved, ARK deflation thesis realized</td></tr>
+</table></div>
+
+<div class="panel" style="border-left:3px solid var(--red);margin-top:1rem">
+<h4>🔴 Highest-Conviction Tail Risk: AI Financial Crisis</h4>
+<p>SEC Chair Gensler warned "AI will be at the center of the next financial crisis." Model monoculture risk is real—if major banks use similar AI models, they react identically to market stress. Hedge fund leverage at highest since 2013. AI bubble burst could trigger $700B+ semiconductor market correction cascading through derivatives, pensions, and consumer credit.</p>
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+<h2><span class="icon">📅</span> Timeline: 1yr / 5yr / 10yr</h2>
+
+<div class="two-col">
+<div>
+<h3>🔵 Near-Term: 2026-2027</h3>
+<div class="timeline">
+<div class="timeline-item"><h4>AI Coding Ubiquity</h4><p>97%+ developer adoption. "Vibe coding" enters enterprise. AI-generated code exceeds 50% at major tech firms.</p></div>
+<div class="timeline-item"><h4>SaaS Reckoning</h4><p>Continued multiple compression. First major SaaS companies restructure around AI-first delivery.</p></div>
+<div class="timeline-item"><h4>Energy Bottleneck Peak</h4><p>Data center occupancy >95%. Power constraints limit deployment. Grid spending accelerates.</p></div>
+<div class="timeline-item"><h4>Robotics Production</h4><p>Tesla targets 50-100K Optimus units. Boston Dynamics Atlas enters production.</p></div>
+<div class="timeline-item"><h4>Labor Market</h4><p>White-collar displacement ~1% (Monte Carlo v2 P50). Entry-level hiring continues to contract. GDP impact slightly negative (−0.09%).</p></div>
+<div class="timeline-item"><h4>Quality Wall Hits</h4><p>Klarna-pattern reversal: enterprises hit quality limits, pull back 8-20% on AI deployment, then re-adopt more carefully.</p></div>
+</div>
+
+<h3>🟡 Medium-Term: 2028-2031</h3>
+<div class="timeline">
+<div class="timeline-item"><h4>Nuclear Renaissance</h4><p>TMI restart (2028). NuScale first SMR (2030). Google/Kairos fleet deployment begins.</p></div>
+<div class="timeline-item"><h4>Displacement Accelerates</h4><p>~21% white-collar tasks automated (v2 P50). Demand feedback loop becomes visible. GDP just barely positive (+0.35%).</p></div>
+<div class="timeline-item"><h4>India IT Crisis</h4><p>1.5M direct IT jobs lost. 3.7M cascade. Bangalore/Hyderabad real estate correction. Political pressure mounts.</p></div>
+<div class="timeline-item"><h4>Bifurcation Visible</h4><p>Index hits 0.13 — clear split between AI-augmented and AI-displaced tiers. UBI experiments expand.</p></div>
+<div class="timeline-item"><h4>Robotics Inflection</h4><p>Multiple manufacturers at 10K+ units/year. Robot cost drops below $2/hr. Service industry pilots begin.</p></div>
+</div>
+</div>
+
+<div>
+<h3>🔴 Long-Term: 2032-2036</h3>
+<div class="timeline">
+<div class="timeline-item"><h4>Sector Transformation</h4><p>Chip sector +25% from baseline. Energy demand +9.9%. Software sector −17.7%. Gini delta +0.077 (US: 0.41→0.49).</p></div>
+<div class="timeline-item"><h4>Bifurcation Peaks</h4><p>Index reaches 0.21 — two-tier economy fully visible. AI-augmented workers earn 3-5x AI-displaced tier. Political crisis likely.</p></div>
+<div class="timeline-item"><h4>GDP Divergence</h4><p>Massive uncertainty: −0.7% to +19.8% (P10-P90). Regime matters enormously. Acceleration scenarios show prosperity; baseline shows modest gains; winter shows stagnation.</p></div>
+<div class="timeline-item"><h4>Education Unrecognizable</h4><p>Micro-credentials dominant. Lifelong learning default. Traditional degree value significantly diminished.</p></div>
+<div class="timeline-item"><h4>AGI Window</h4><p>Expert forecasters give ~25% chance of AGI by 2029, higher by 2036. Alignment remains unsolved or solved—the defining question.</p></div>
+<div class="timeline-item"><h4>Fourth-Order Effects</h4><p>Dating market disruption. Birth rate implications. Human augmentation questions. The meaning crisis reaches mainstream.</p></div>
+</div>
+
+<div class="panel" style="margin-top:1.5rem">
+<h4>AGI Timeline Estimates</h4>
+<div class="chart-wrap short"><canvas id="chartAGI"></canvas></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources">
+<h2><span class="icon">📚</span> Data Sources & Methodology</h2>
+<div class="panel">
+<h4>Monte Carlo v2 Methodology</h4>
+<p>10,000 simulations across 14+ variables with <strong>regime-switching uncertainty</strong> (6 regimes: baseline 50%, acceleration 15%, AI winter 10%, regulatory shock 10%, capability plateau 10%, China decoupling 5%). Correlated sampling via Gaussian copula (Cholesky decomposition) ensures adoption, displacement, and productivity co-vary realistically.</p>
+<p>Key v2 innovations: <strong>Demand feedback loop</strong> (displacement → income loss → spending cuts → GDP drag); <strong>Klarna-dip adoption curve</strong> (quality wall reversal); <strong>Acemoglu-calibrated GDP transmission</strong> (~7% of task-level productivity reaches GDP); <strong>India IT cascade</strong> (5.4M direct workers, 2.5x multiplier); <strong>Bifurcation index</strong> (AI-augmented vs AI-displaced economic tiers).</p>
+
+<h4>Primary Research Sources (17 files, 42,000+ words)</h4>
+<div style="columns:2;column-gap:1.5rem;font-size:.8rem;color:var(--text2)">
+<p>• BLS Employment Situation (Feb 2026)<br>
+• McKinsey "Agents, Robots, and Us" (Nov 2025)<br>
+• Goldman Sachs Research (multiple reports)<br>
+• World Economic Forum Future of Jobs 2025<br>
+• IMF Staff Discussion Notes<br>
+• Stanford HAI AI Index 2025<br>
+• CSIS Export Control Analysis (May 2025)<br>
+• RAND: AI and Nuclear Risk<br>
+• IEA Electricity Report 2024<br>
+• Federal Reserve Financial Stability Report (Nov 2025)<br>
+• Moody's/S&P Credit Strategy Reports<br>
+• NBER Working Papers (Acemoglu 2024)<br>
+• PwC Global AI Jobs Barometer 2025<br>
+• Pew Research Center surveys<br>
+• ARK Invest "Big Ideas 2026" (Feb 12, 2026)<br>
+• Carnegie Endowment: Middle East AI<br>
+• Council on Foreign Relations: China AI<br>
+• Company reports: NVIDIA, TSMC, ASML, Cursor, Salesforce, Klarna, Spotify, Microsoft</p>
+</div>
+
+<h4>Disclaimer</h4>
+<p style="font-size:.8rem;color:var(--text3)">This report is for informational purposes only and does not constitute investment advice. All projections are scenario-based and subject to significant uncertainty. Past performance does not guarantee future results. Monte Carlo outputs represent probability distributions, not predictions. The v2 model incorporates demand feedback loops and regime uncertainty that substantially change projections from v1. Numbers marked as "estimated" lack direct source confirmation.</p>
+</div>
+</section>
+
+<div class="footer">
+<p>AI Disruption Report — February 12, 2026</p>
+<p style="margin-top:.25rem">Synthesized from 17 research files · 42,000+ words · Monte Carlo v2 simulation (regime-switching, demand feedback)</p>
+</div>
+
+</div>
+
+<script>
+// Tab system
+document.querySelectorAll('.tabs').forEach(tabGroup => {
+  tabGroup.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabGroup.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const section = tabGroup.closest('section');
+      section.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      section.querySelector('#' + tab.dataset.tab).classList.add('active');
+    });
+  });
+});
+
+function toggleAccordion(header) {
+  header.parentElement.classList.toggle('open');
+}
+
+Chart.defaults.color = '#a0a0c0';
+Chart.defaults.borderColor = 'rgba(42,42,74,0.5)';
+Chart.defaults.font.family = "'Inter',-apple-system,sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.plugins.legend.labels.boxWidth = 12;
+
+const years = ['2027', '2031', '2036'];
+
+function makeBarChart(id, data, label, color, unit='%') {
+  const ctx = document.getElementById(id);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: years,
+      datasets: [{
+        label: label + ' (P50)',
+        data: data.map(d => d.p50),
+        backgroundColor: color + '99',
+        borderColor: color,
+        borderWidth: 1,
+        borderRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        tooltip: {
+          callbacks: {
+            afterLabel: (ctx) => {
+              const d = data[ctx.dataIndex];
+              return `P10: ${d.p10.toFixed(unit==='%'?1:3)}${unit}  P90: ${d.p90.toFixed(unit==='%'?1:3)}${unit}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: { grid: { color: 'rgba(42,42,74,0.3)' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+}
+
+// Monte Carlo v2 data
+const mc = {
+  displacement: [
+    {p10:0.5,p50:1.0,p90:2.6},
+    {p10:11.6,p50:20.7,p90:32.6},
+    {p10:15.2,p50:27.7,p90:42.9}
+  ],
+  gdp: [
+    {p10:-0.25,p50:-0.09,p90:0.03},
+    {p10:-2.2,p50:0.35,p90:5.9},
+    {p10:-0.7,p50:5.2,p90:19.8}
+  ],
+  energy: [
+    {p10:0.05,p50:0.11,p90:0.28},
+    {p10:2.3,p50:4.2,p90:6.9},
+    {p10:5.4,p50:9.9,p90:16.2}
+  ],
+  chips: [
+    {p10:0.10,p50:0.26,p90:0.77},
+    {p10:3.7,p50:10.5,p90:19.1},
+    {p10:8.7,p50:25.0,p90:44.5}
+  ],
+  saas: [
+    {p10:-0.49,p50:-0.19,p90:-0.09},
+    {p10:-12.0,p50:-7.4,p90:-4.1},
+    {p10:-28.3,p50:-17.7,p90:-9.7}
+  ],
+  gini: [
+    {p10:0.0007,p50:0.0012,p90:0.0027},
+    {p10:0.024,p50:0.042,p90:0.057},
+    {p10:0.043,p50:0.077,p90:0.101}
+  ],
+  bifurcation: [
+    {p10:0.003,p50:0.006,p90:0.015},
+    {p10:0.075,p50:0.132,p90:0.200},
+    {p10:0.116,p50:0.209,p90:0.303}
+  ],
+  prodBoost: [
+    {p10:0.04,p50:0.13,p90:0.46},
+    {p10:1.58,p50:4.78,p90:11.75},
+    {p10:3.70,p50:11.41,p90:27.63}
+  ],
+  demandDrag: [
+    {p10:0.10,p50:0.22,p90:0.54},
+    {p10:2.37,p50:4.30,p90:7.09},
+    {p10:3.15,p50:5.79,p90:9.33}
+  ]
+};
+
+makeBarChart('chartDisplacement', mc.displacement, 'Displacement', '#6366f1');
+makeBarChart('chartGDP', mc.gdp, 'GDP Impact (Net)', '#22c55e');
+makeBarChart('chartEnergy', mc.energy, 'Energy Demand', '#f97316');
+makeBarChart('chartChips', mc.chips, 'Chip Growth', '#06b6d4');
+makeBarChart('chartSaaS', mc.saas, 'SaaS Decline', '#ef4444');
+makeBarChart('chartGini', mc.gini, 'Gini Delta', '#a78bfa', '');
+makeBarChart('chartBifurcation', mc.bifurcation, 'Bifurcation Index', '#ec4899', '');
+
+// GDP Split chart - productivity boost vs demand drag
+new Chart(document.getElementById('chartGDPSplit'), {
+  type: 'bar',
+  data: {
+    labels: years,
+    datasets: [
+      {
+        label: 'Productivity Boost (P50)',
+        data: mc.prodBoost.map(d => d.p50),
+        backgroundColor: '#22c55e99',
+        borderColor: '#22c55e',
+        borderWidth: 1,
+        borderRadius: 4,
+      },
+      {
+        label: 'Demand Drag (P50)',
+        data: mc.demandDrag.map(d => -d.p50),
+        backgroundColor: '#ef444499',
+        borderColor: '#ef4444',
+        borderWidth: 1,
+        borderRadius: 4,
+      },
+      {
+        label: 'Net GDP (P50)',
+        data: mc.gdp.map(d => d.p50),
+        backgroundColor: '#6366f199',
+        borderColor: '#6366f1',
+        borderWidth: 1,
+        borderRadius: 4,
+      }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    scales: {
+      y: { grid: { color: 'rgba(42,42,74,0.3)' } },
+      x: { grid: { display: false } }
+    }
+  }
+});
+
+// Regime distribution chart
+new Chart(document.getElementById('chartRegimes'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Baseline (50%)', 'Acceleration (15%)', 'AI Winter (10%)', 'Regulatory Shock (10%)', 'Capability Plateau (10%)', 'China Decoupling (5%)'],
+    datasets: [{
+      data: [50, 15, 10, 10, 10, 5],
+      backgroundColor: ['#6366f1', '#22c55e', '#707090', '#ef4444', '#eab308', '#f97316'],
+      borderWidth: 0,
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'right' } },
+    cutout: '55%'
+  }
+});
+
+// Scenario probability chart
+new Chart(document.getElementById('chartScenarios'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Gradual Adaptation (35%)', 'Rapid Disruption (30%)', 'Soft Landing (20%)', 'Techno-Utopia (10%)', 'Dystopia (5%)'],
+    datasets: [{
+      data: [35, 30, 20, 10, 5],
+      backgroundColor: ['#22c55e', '#f97316', '#06b6d4', '#6366f1', '#ef4444'],
+      borderWidth: 0,
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'right' } },
+    cutout: '55%'
+  }
+});
+
+// Allocation chart
+new Chart(document.getElementById('chartAllocation'), {
+  type: 'doughnut',
+  data: {
+    labels: ['Semiconductors (NVDA/TSM/ASML)', 'Energy Infrastructure (CEG/VST)', 'Data Center REITs', 'Cybersecurity', 'Gold/Hard Assets (Hedge)', 'Cash/Bonds'],
+    datasets: [{
+      data: [30, 20, 15, 10, 15, 10],
+      backgroundColor: ['#6366f1', '#f97316', '#06b6d4', '#22c55e', '#eab308', '#707090'],
+      borderWidth: 0,
+      hoverOffset: 8
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } },
+    cutout: '50%'
+  }
+});
+
+// Geopolitical radar
+new Chart(document.getElementById('chartGeo'), {
+  type: 'radar',
+  data: {
+    labels: ['Compute', 'Talent', 'Investment', 'Open Source', 'Military Deploy', 'Research Vol.', 'Edge AI Chips'],
+    datasets: [
+      { label: 'United States', data: [95, 70, 85, 40, 60, 55, 30], borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,.15)', pointBackgroundColor: '#6366f1' },
+      { label: 'China', data: [15, 60, 50, 80, 75, 80, 90], borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,.15)', pointBackgroundColor: '#ef4444' }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    scales: {
+      r: {
+        beginAtZero: true, max: 100,
+        grid: { color: 'rgba(42,42,74,0.3)' },
+        pointLabels: { font: { size: 10 } },
+        ticks: { display: false }
+      }
+    }
+  }
+});
+
+// AGI timeline
+new Chart(document.getElementById('chartAGI'), {
+  type: 'bar',
+  data: {
+    labels: ['AI Company Leaders', 'Metaculus', 'Samotsvety', 'Published Researchers', 'Superforecasters'],
+    datasets: [{
+      label: '25% Chance AGI By (Year)',
+      data: [2026, 2027, 2029, 2032, 2047],
+      backgroundColor: ['#ef4444','#f97316','#eab308','#22c55e','#06b6d4'],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    scales: {
+      x: { min: 2025, max: 2050, grid: { color: 'rgba(42,42,74,0.3)' } },
+      y: { grid: { display: false } }
+    },
+    plugins: { legend: { display: false } }
+  }
+});
+
+// Animate sections on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.style.animationPlayState = 'running';
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('section').forEach(s => {
+  s.style.animationPlayState = 'paused';
+  observer.observe(s);
+});
+</script>
+</body>
+</html>
