@@ -81,6 +81,52 @@ The fact that a hardware engineer built a general-purpose version in a weekend w
 
 Someone at TI should either acquire this concept or build their own, deeply integrated version. The PMIC datasheet → visual sequence → validated design pipeline is wide open.
 
+## The Harder Problem: Can AI Actually Read Datasheets?
+
+The visual designer is step 3 of a 4-step pipeline. The real question is whether AI can handle the other three.
+
+### Step 1: Datasheet Parsing → Structured Extraction
+
+**Today:** LLMs can parse PDF datasheets reasonably well — timing specs, absolute max ratings, sequencing requirements. TI's datasheets are actually better structured than most vendors (consistent formatting, clear tables). Vision models can even interpret timing diagram figures.
+
+**The catch:** PMIC datasheets scatter sequencing info across multiple sections. Critical constraints hide in footnotes — "VCC_CORE must reach 90% before VCCIO is applied" buried in paragraph 7 of the functional description. Timing parameters vary by configuration (I2C register settings, OTP fuse states). An LLM can *find* most of this, but "most" isn't good enough when wrong sequencing means silicon damage.
+
+### Step 2: Constraint Database
+
+Extract the parsed specs into a machine-readable format:
+- Rail dependencies (VCC_1V8 requires VCC_3V3 stable first)
+- Min/max delays between rails (5ms ≤ t_delay ≤ 20ms)
+- Ramp rate limits (must reach 90% within 10ms)
+- Shutdown ordering (often different from startup)
+- Configuration-dependent variants (OTP vs I2C programmed timing)
+
+TI has a massive advantage here — **they already have this data internally.** SysConfig proves that TI can ship machine-readable device models. WEBENCH has power supply design math. The structured information exists; it just hasn't been exposed for sequencing specifically.
+
+### Step 3: Visual Designer (What Caner Built)
+
+This is the part that got vibe-coded in a weekend. It's also the easiest part. Once you have structured constraints, rendering timing diagrams is a solved problem.
+
+### Step 4: Validation Engine
+
+The killer feature nobody has yet:
+
+> "Your sequence violates TPS65219 Table 7-3 — VCC_1V0 ramp must complete before RESET_N deasserts. Current design has 2ms overlap."
+
+This turns a visualization tool into a **design rule checker for power**. Same concept as DRC in PCB layout, but for temporal sequencing. Every PMIC datasheet has these rules. Today, engineers verify them manually by cross-referencing timing diagrams against datasheet tables. It's tedious, error-prone, and exactly the kind of work AI should automate.
+
+### The Full Pipeline
+
+```
+PDF Datasheet ──→ LLM + Vision ──→ Constraint DB ──→ Visual Designer ──→ Validation
+   (messy)         (extraction)      (structured)     (Caner's tool)     (DRC for power)
+                                          ↑
+                                    TI already has
+                                    this internally
+                                    (SysConfig, WEBENCH)
+```
+
+Caner built the middle. TI owns the data for the left side and the validation logic for the right side. The engineer who connects all four steps ships the most valuable power design tool in the industry.
+
 ## Try It
 
 The [Lovable-hosted version](https://power-sequence-designer.lovable.app) appears to be unpublished at the time of writing (404), but Caner shared it publicly — it may return, or he may be iterating on it. Follow [@cneralp](https://x.com/cneralp) for updates.
