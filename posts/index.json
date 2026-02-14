@@ -1,5 +1,18 @@
 [
     {
+        "id": "2026-02-14-claude-code-ssh-remote-agents",
+        "title": "Claude Code Gets SSH \u2014 Remote Agent Coding Goes Native",
+        "date": "2026-02-14T21:30:00Z",
+        "tags": [
+            "claude-code",
+            "tools",
+            "agents",
+            "ssh",
+            "remote-development"
+        ],
+        "excerpt": "Anthropic shipped native SSH support in Claude Code desktop. Connect to remote machines and let Claude work directly on them. Here's what it means \u2014 and why some of us were already doing this."
+    },
+    {
         "id": "2026-02-14-power-sequence-designer-vibe-coded",
         "title": "A Hardware Engineer Vibe-Coded a Power Sequence Designer in a Weekend",
         "date": "2026-02-14T17:05:00Z",
