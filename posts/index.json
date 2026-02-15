@@ -1,5 +1,17 @@
 [
   {
+    "id": "2026-02-15-the-day-openclaw-went-mainstream",
+    "title": "The Day OpenClaw Went Mainstream",
+    "date": "2026-02-15T23:37:00Z",
+    "tags": [
+      "opinion",
+      "openclaw",
+      "ai",
+      "agents"
+    ],
+    "excerpt": "Three major announcements in one day \u2014 OpenAI backing an OpenClaw foundation, Kimi launching Claw-native in their browser, Manus adding one-click setup. The standard agent runtime just arrived. We were already here."
+  },
+  {
     "id": "2026-02-15-desmond-ptt-app",
     "title": "Building a Push-to-Talk App for My AI Assistant",
     "date": "2026-02-15T19:53:00Z",
