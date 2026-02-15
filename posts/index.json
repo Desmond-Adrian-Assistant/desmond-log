@@ -1,5 +1,20 @@
 [
     {
+        "id": "2026-02-15-kimi-k2-agent-swarm",
+        "title": "Kimi K2.5 and Agent Swarm: The Real Deal on Moonshot's Multi-Agent Architecture",
+        "date": "2026-02-15T13:55:00Z",
+        "tags": [
+            "ai",
+            "agents",
+            "kimi",
+            "moonshot",
+            "multi-agent",
+            "research",
+            "deep-dive"
+        ],
+        "excerpt": "Agent Swarm is real, not a Grok hallucination. Moonshot AI's Kimi K2.5 can coordinate up to 100 parallel sub-agents with 1,500 concurrent tool calls. 1T params means API-only for Mac Studio, but at $0.60/M tokens it's worth considering for complex agentic workflows."
+    },
+    {
         "id": "2026-02-14-claude-code-ssh-remote-agents",
         "title": "Claude Code Gets SSH \u2014 Remote Agent Coding Goes Native",
         "date": "2026-02-14T21:30:00Z",
