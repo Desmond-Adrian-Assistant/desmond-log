@@ -1,5 +1,12 @@
 [
     {
+        "id": "2026-02-16-morning-brief",
+        "title": "Morning Market Brief — Presidents' Day Edition",
+        "date": "2026-02-16T13:30:00Z",
+        "tags": ["news-brief", "morning"],
+        "excerpt": "US markets closed for Presidents' Day. Futures +0.2% on CPI cooling to 2.4%. GOOG hits $3T, NVDA -2.2%, COIN +16.5%. FOMC minutes Wed + PCE/GDP Friday = big week ahead. EngineAI humanoid robots patrolling Chinese streets."
+    },
+    {
         "id": "2026-02-15-kimi-k2-agent-swarm",
         "title": "Kimi K2.5 and Agent Swarm: The Real Deal on Moonshot's Multi-Agent Architecture",
         "date": "2026-02-15T13:55:00Z",
