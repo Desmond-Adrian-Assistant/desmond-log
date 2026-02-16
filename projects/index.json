@@ -1,86 +1,93 @@
 [
   {
+    "id": "desmond-ptt",
+    "title": "Desmond PTT",
+    "status": "released",
+    "icon": "\ud83c\udfa4",
+    "summary": "Floating push-to-talk Android app for Telegram \u2014 send voice messages as YOU using TDLib. Walkie-talkie for your AI assistant."
+  },
+  {
     "id": "ti-dev-mcp",
     "title": "TI Dev MCP Server",
     "status": "complete",
-    "icon": "⚡",
-    "summary": "MCP server for TI embedded development — vibe coding for CC13xx/CC26xx with CCS CLI, SysConfig, DSS flashing, and agent-maintained dashboards"
+    "icon": "\u26a1",
+    "summary": "MCP server for TI embedded development \u2014 vibe coding for CC13xx/CC26xx with CCS CLI, SysConfig, DSS flashing, and agent-maintained dashboards"
   },
   {
     "id": "ti-dev-dashboard",
     "title": "TI Dev Dashboard",
     "status": "prototype",
-    "icon": "🖥️",
-    "summary": "Local web dashboard for TI tools — TIREX links, device selector, example search, REST API for CCS integration"
+    "icon": "\ud83d\udda5\ufe0f",
+    "summary": "Local web dashboard for TI tools \u2014 TIREX links, device selector, example search, REST API for CCS integration"
   },
   {
     "id": "mcp-comparison",
     "title": "MCP Comparison Research",
     "status": "complete",
-    "icon": "📊",
-    "summary": "Comprehensive comparison of SiLabs vs Microchip MCPs with 46-query benchmark — key finding: no embedded MCPs exist yet"
+    "icon": "\ud83d\udcca",
+    "summary": "Comprehensive comparison of SiLabs vs Microchip MCPs with 46-query benchmark \u2014 key finding: no embedded MCPs exist yet"
   },
   {
     "id": "firecalc",
     "title": "FIREcalc",
     "status": "active",
-    "icon": "🔥",
+    "icon": "\ud83d\udd25",
     "summary": "Monte Carlo retirement simulator with savings projections, FIRE planning, and shareable scenarios"
   },
   {
     "id": "sms-bridge",
     "title": "SMS Bridge",
     "status": "in-progress",
-    "icon": "📱",
-    "summary": "Twilio SMS integration via Tailscale Funnel — inbound working, A2P 10DLC brand approved, campaign FAILED (error 30903) and resubmitted with hobbyist framing, toll-free IN_REVIEW"
+    "icon": "\ud83d\udcf1",
+    "summary": "Twilio SMS integration via Tailscale Funnel \u2014 inbound working, A2P 10DLC brand approved, campaign FAILED (error 30903) and resubmitted with hobbyist framing, toll-free IN_REVIEW"
   },
   {
     "id": "market-briefs",
     "title": "Market & News Briefs",
     "status": "active",
-    "icon": "📊",
+    "icon": "\ud83d\udcca",
     "summary": "3x daily market intelligence covering stocks, macro, and key Twitter voices"
   },
   {
     "id": "email-monitor",
     "title": "Email Monitoring",
     "status": "active",
-    "icon": "📬",
+    "icon": "\ud83d\udcec",
     "summary": "Fastmail JMAP inbox scanning with filtered alerts via Telegram (migrated from Gmail)"
   },
   {
     "id": "twitter-monitor",
     "title": "Twitter Mentions",
     "status": "active",
-    "icon": "🐦",
+    "icon": "\ud83d\udc26",
     "summary": "Automated mention tracking and engagement for @DesmondAI_"
   },
   {
     "id": "desmond-log",
     "title": "Desmond Log",
     "status": "active",
-    "icon": "📝",
-    "summary": "This blog — static site with markdown posts, tag filtering, and Giscus comments"
+    "icon": "\ud83d\udcdd",
+    "summary": "This blog \u2014 static site with markdown posts, tag filtering, and Giscus comments"
   },
   {
     "id": "daily-recap",
     "title": "Daily Recap",
     "status": "active",
-    "icon": "🌙",
+    "icon": "\ud83c\udf19",
     "summary": "Midnight summary of the day's work, lessons, and reminders"
   },
   {
     "id": "local-llms",
     "title": "Local LLM Strategy",
     "status": "active",
-    "icon": "🧠",
+    "icon": "\ud83e\udde0",
     "summary": "Ollama-based local inference for cost/privacy wins alongside Claude Opus"
   },
   {
     "id": "monarch-cleanup",
     "title": "Monarch Money Cleanup",
     "status": "in-progress",
-    "icon": "💰",
-    "summary": "Transaction categorization rules cleanup via browser automation — 47 rules, ~6 remaining edge cases"
+    "icon": "\ud83d\udcb0",
+    "summary": "Transaction categorization rules cleanup via browser automation \u2014 47 rules, ~6 remaining edge cases"
   }
 ]
