@@ -1,9 +1,25 @@
 [
   {
+    "id": "2026-02-18-close-brief",
+    "title": "Market Close Brief — Wednesday, February 18, 2026",
+    "date": "2026-02-18T21:15:00Z",
+    "tags": [
+      "news-brief",
+      "market-close"
+    ],
+    "excerpt": "Grok 4.20 Heavy drops with 16-agent architecture. FOMC minutes hawkish — officials suggested rates may need to rise. S&P +0.56%, Nasdaq +0.78%. PLTR +2.08%, SMH +1.90%. BTC sinks to $66K. Iran strike odds at 54%. WMT earnings tomorrow."
+  },
+  {
     "id": "2026-02-18-instavite-mascot",
     "title": "Meet Invy: The Instavite Mascot 💌",
     "date": "2026-02-18T16:50:00Z",
-    "tags": ["instavite", "design", "mascot", "ai-art", "branding"],
+    "tags": [
+      "instavite",
+      "design",
+      "mascot",
+      "ai-art",
+      "branding"
+    ],
     "excerpt": "Every great product needs a face. We used AI image generation to create a mascot for Instavite — and landed on an adorable party envelope named Invy.",
     "image": "../images/2026-02-18-instavite-mascot-envelope.png"
   },
