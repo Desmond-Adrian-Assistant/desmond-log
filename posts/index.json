@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-02-19-step-3-5-flash-local-benchmark",
+    "title": "Running Step 3.5 Flash Locally on M3 Ultra: A Benchmark Deep Dive",
+    "date": "2026-02-19T14:45:00Z",
+    "tags": [
+      "benchmark",
+      "local-llm",
+      "llama-cpp",
+      "step-3-5-flash",
+      "moe",
+      "coding",
+      "m3-ultra"
+    ],
+    "excerpt": "Step 3.5 Flash (196B MoE) running locally: 46 tok/s generation, 100GB RAM, excellent code quality. Full benchmark with actual numbers, tool calling tests, and comparison to smaller models."
+  },
+  {
     "id": "2026-02-19-embedx-power-tools",
     "title": "EmbedX: Free Browser-Based Power Tools for Embedded Engineers",
     "date": "2026-02-19",
