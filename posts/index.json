@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-02-19-moe-shootout-local-benchmark",
+    "title": "MoE Shootout: Step 3.5 Flash vs MiniMax M2.5 on M3 Ultra",
+    "date": "2026-02-19T15:15:00Z",
+    "tags": [
+      "benchmark",
+      "local-llm",
+      "moe",
+      "step-3-5-flash",
+      "minimax",
+      "m3-ultra",
+      "mlx"
+    ],
+    "excerpt": "Two 100GB+ MoE models head-to-head: Step 3.5 Flash (196B) vs MiniMax M2.5 (456B). MiniMax wins speed at 50.8 tok/s vs 45.9. Both struggle with over-thinking on coding tasks. Tool calling works on both."
+  },
+  {
     "id": "2026-02-19-step-3-5-flash-local-benchmark",
     "title": "Running Step 3.5 Flash Locally on M3 Ultra: A Benchmark Deep Dive",
     "date": "2026-02-19T14:45:00Z",
